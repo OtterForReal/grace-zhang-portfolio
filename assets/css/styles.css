@@ -29,9 +29,10 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 18% 8%, rgba(212, 229, 239, 0.7), transparent 26rem),
-    radial-gradient(circle at 92% 22%, rgba(139, 163, 199, 0.34), transparent 25rem),
-    radial-gradient(circle at 70% 88%, rgba(0, 61, 111, 0.13), transparent 27rem),
+    radial-gradient(ellipse at 18% 8%, rgba(212, 229, 239, 0.78), transparent 25rem),
+    radial-gradient(ellipse at 92% 22%, rgba(139, 163, 199, 0.4), transparent 24rem),
+    radial-gradient(ellipse at 70% 88%, rgba(0, 61, 111, 0.16), transparent 28rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent 28rem),
     linear-gradient(90deg, rgba(27, 38, 53, 0.026) 1px, transparent 1px),
     linear-gradient(rgba(27, 38, 53, 0.023) 1px, transparent 1px),
     var(--paper);
@@ -55,19 +56,60 @@ body::after {
 
 body::before {
   background:
-    radial-gradient(ellipse at 82% 12%, rgba(25, 50, 95, 0.16), transparent 18rem),
-    radial-gradient(ellipse at 6% 58%, rgba(0, 61, 111, 0.14), transparent 22rem),
-    radial-gradient(ellipse at 76% 72%, rgba(69, 90, 120, 0.16), transparent 20rem);
-  filter: blur(22px);
-  opacity: 0.9;
+    radial-gradient(ellipse at 5% 20%, rgba(0, 61, 111, 0.13), transparent 16rem),
+    radial-gradient(ellipse at 83% 10%, rgba(25, 50, 95, 0.18), transparent 19rem),
+    radial-gradient(ellipse at 9% 68%, rgba(0, 61, 111, 0.14), transparent 24rem),
+    radial-gradient(ellipse at 76% 78%, rgba(69, 90, 120, 0.22), transparent 23rem),
+    linear-gradient(158deg, transparent 0 38%, rgba(25, 50, 95, 0.07) 41% 45%, transparent 51%),
+    linear-gradient(24deg, transparent 0 58%, rgba(0, 61, 111, 0.08) 61% 66%, transparent 72%),
+    linear-gradient(174deg, transparent 0 72%, rgba(107, 121, 142, 0.12) 73% 78%, transparent 83%);
+  filter: blur(28px);
+  opacity: 0.98;
 }
 
 body::after {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)),
-    repeating-linear-gradient(0deg, rgba(27, 38, 53, 0.018) 0 1px, transparent 1px 5px);
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.45), transparent 11rem),
+    radial-gradient(circle at 90% 58%, rgba(255, 255, 255, 0.36), transparent 13rem),
+    repeating-linear-gradient(7deg, rgba(27, 38, 53, 0.018) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(93deg, rgba(27, 38, 53, 0.014) 0 1px, transparent 1px 9px);
   mix-blend-mode: multiply;
   opacity: 0.5;
+}
+
+.ink-wash {
+  background:
+    radial-gradient(circle at 42% 46%, rgba(0, 61, 111, 0.2), rgba(139, 163, 199, 0.14) 34%, transparent 68%),
+    radial-gradient(circle at 64% 35%, rgba(212, 229, 239, 0.28), transparent 28%),
+    radial-gradient(circle at 30% 72%, rgba(25, 50, 95, 0.12), transparent 36%);
+  border-radius: 46% 54% 52% 48% / 42% 52% 48% 58%;
+  filter: blur(9px);
+  height: var(--ink-size, 13rem);
+  left: var(--ink-x, 50%);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: var(--ink-y, 50%);
+  transform: translate(-50%, -50%) scale(0.36) rotate(var(--ink-rotate, 0deg));
+  width: var(--ink-size, 13rem);
+  z-index: 12;
+}
+
+.ink-wash::after {
+  background:
+    repeating-linear-gradient(11deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(97deg, rgba(27, 38, 53, 0.04) 0 1px, transparent 1px 10px);
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  mix-blend-mode: screen;
+  opacity: 0.4;
+  position: absolute;
+}
+
+.ink-wash.is-visible {
+  animation: inkBloom 900ms ease-out forwards;
 }
 
 body.nav-open {
@@ -349,6 +391,7 @@ h3 {
 
 .signal-lab {
   background:
+    radial-gradient(ellipse at 50% 48%, rgba(25, 50, 95, 0.12), transparent 17rem),
     radial-gradient(circle at 80% 10%, rgba(212, 229, 239, 0.54), transparent 18rem),
     radial-gradient(circle at 10% 80%, rgba(0, 61, 111, 0.13), transparent 18rem),
     rgba(248, 249, 245, 0.68);
@@ -364,7 +407,8 @@ h3 {
 }
 
 .signal-lab::after {
-  background: linear-gradient(90deg, var(--moon-white), var(--orient-white), var(--deep-blue), var(--green-black));
+  background:
+    linear-gradient(90deg, var(--moon-white), var(--orient-white), var(--deep-blue), var(--green-black));
   content: "";
   height: 5px;
   left: 1.1rem;
@@ -498,6 +542,7 @@ h3 {
 
 .case-card {
   background:
+    radial-gradient(ellipse at 0% 100%, rgba(0, 61, 111, 0.08), transparent 16rem),
     radial-gradient(circle at 100% 0%, rgba(212, 229, 239, 0.42), transparent 13rem),
     rgba(248, 249, 245, 0.8);
   border: 1px solid var(--line);
@@ -525,6 +570,13 @@ h3 {
   transform: translateY(-5px);
 }
 
+.case-card:hover .case-visual::after,
+.contact-link:hover::after,
+.timeline-item:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .case-visual {
   align-items: center;
   display: flex;
@@ -540,6 +592,22 @@ h3 {
   content: "";
   inset: 1rem;
   position: absolute;
+}
+
+.case-visual::after {
+  background:
+    radial-gradient(ellipse at center, rgba(0, 61, 111, 0.16), rgba(139, 163, 199, 0.08) 44%, transparent 72%);
+  border-radius: 50% 43% 55% 45%;
+  content: "";
+  filter: blur(10px);
+  height: 14rem;
+  opacity: 0;
+  position: absolute;
+  right: -2rem;
+  top: -2rem;
+  transform: scale(0.8);
+  transition: opacity 420ms ease, transform 420ms ease;
+  width: 14rem;
 }
 
 .visual-carevan {
@@ -1026,6 +1094,24 @@ h3 {
   transform: translateX(6px);
 }
 
+.timeline-item::after,
+.contact-link::after {
+  background:
+    radial-gradient(ellipse at center, rgba(139, 163, 199, 0.22), transparent 62%);
+  border-radius: 45% 55% 48% 52%;
+  content: "";
+  filter: blur(12px);
+  height: 8rem;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.4rem;
+  transform: scale(0.72);
+  transition: opacity 420ms ease, transform 420ms ease;
+  width: 8rem;
+}
+
 .timeline-date {
   color: var(--muted);
   font-size: 0.75rem;
@@ -1115,6 +1201,7 @@ h3 {
   display: grid;
   gap: 0.25rem;
   padding: 1.1rem;
+  position: relative;
   transition: border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
@@ -1167,6 +1254,22 @@ h3 {
 
   50% {
     box-shadow: 0 0 0 8px rgba(0, 61, 111, 0);
+  }
+}
+
+@keyframes inkBloom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25) rotate(var(--ink-rotate, 0deg));
+  }
+
+  22% {
+    opacity: 0.34;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2) rotate(var(--ink-rotate, 0deg));
   }
 }
 

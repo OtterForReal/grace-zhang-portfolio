@@ -8,6 +8,7 @@ const notes = [...document.querySelectorAll(".note")];
 const cursor = document.querySelector(".cursor-dot");
 const canvas = document.querySelector("[data-signal-canvas]");
 const currentPage = document.body.dataset.page;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const setScrolledHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 12);
@@ -125,7 +126,32 @@ window.addEventListener(
   { passive: true }
 );
 
-if (canvas) {
+if (!prefersReducedMotion) {
+  let lastInkBloom = 0;
+
+  const bloomInk = (event, force = false) => {
+    const now = performance.now();
+    if (!force && now - lastInkBloom < 260) return;
+    lastInkBloom = now;
+
+    const bloom = document.createElement("span");
+    bloom.className = "ink-wash is-visible";
+    bloom.style.setProperty("--ink-x", `${event.clientX}px`);
+    bloom.style.setProperty("--ink-y", `${event.clientY}px`);
+    bloom.style.setProperty("--ink-rotate", `${Math.round(Math.random() * 80 - 40)}deg`);
+    bloom.style.setProperty("--ink-size", `${Math.round(150 + Math.random() * 90)}px`);
+    document.body.appendChild(bloom);
+    bloom.addEventListener("animationend", () => bloom.remove(), { once: true });
+  };
+
+  document.querySelectorAll(".case-card, .button, .note, .contact-link, .timeline-item").forEach((item) => {
+    item.addEventListener("pointerenter", (event) => bloomInk(event, true));
+  });
+
+  window.addEventListener("click", (event) => bloomInk(event, true));
+}
+
+if (canvas && !prefersReducedMotion) {
   const ctx = canvas.getContext("2d");
   const colors = ["#d4e5ef", "#8ba3c7", "#003d6f", "#19325f", "#45475e"];
   const points = Array.from({ length: 22 }, (_, index) => ({
