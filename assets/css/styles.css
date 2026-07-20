@@ -209,17 +209,20 @@ button {
 }
 
 .site-nav a::before {
-  background: var(--deep-blue);
-  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(0, 61, 111, 0.28), rgba(139, 163, 199, 0.16) 54%, transparent 72%);
+  border-radius: 999px;
+  bottom: -0.42rem;
   content: "";
-  height: 0.36rem;
-  left: 50%;
+  height: 0.46rem;
+  left: -0.32rem;
   opacity: 0;
   position: absolute;
-  top: -0.64rem;
-  transform: translateX(-50%) scale(0.3);
+  right: -0.32rem;
+  transform: scaleX(0.36);
+  transform-origin: center;
   transition: opacity 180ms ease, transform 180ms ease;
-  width: 0.36rem;
+  z-index: -1;
 }
 
 .site-nav a:hover,
@@ -230,7 +233,7 @@ button {
 .site-nav a:hover::before,
 .site-nav a.active::before {
   opacity: 1;
-  transform: translateX(-50%) scale(1);
+  transform: scaleX(1);
 }
 
 .nav-toggle {
