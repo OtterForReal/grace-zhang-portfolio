@@ -28,6 +28,7 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a class="active magnetic" href="#home">Home</a>
         <a class="magnetic" href="#work">Work</a>
+        <a class="magnetic" href="#process">Process</a>
         <a class="magnetic" href="#approach">Approach</a>
         <a class="magnetic" href="#contact">Contact</a>
       </nav>
@@ -36,18 +37,24 @@
     <main>
       <section class="hero section-shell" id="home">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Grace Zhang / HCDE / Seattle</p>
+          <p class="eyebrow">Product Designer / UX Researcher / Builder</p>
           <h1>
-            Designing interfaces that feel
-            <span>quietly useful</span>.
+            Designing thoughtful products from
+            <span>research to interaction</span>.
           </h1>
           <p class="lede">
-            I blend UX research, product thinking, and frontend craft to make digital systems
-            easier to understand, kinder to use, and more delightful in the small moments.
+            I’m Grace, an HCDE student at the University of Washington. I turn ambiguous
+            problems into clear user flows, testable prototypes, and interfaces that feel calm,
+            usable, and a little bit memorable.
           </p>
+          <div class="hero-proof" aria-label="Portfolio focus areas">
+            <span>UX research</span>
+            <span>Interaction design</span>
+            <span>Prototyping</span>
+          </div>
           <div class="hero-actions">
             <a class="button primary magnetic" href="#work">
-              View work
+              View case studies
               <span aria-hidden="true">+</span>
             </a>
             <a class="button ghost magnetic" href="#contact">Say hello</a>
@@ -57,21 +64,21 @@
         <div class="signal-lab reveal" data-tilt>
           <canvas class="signal-canvas" data-signal-canvas aria-hidden="true"></canvas>
           <div class="lab-header">
-            <span>Live notes</span>
-            <span class="pulse">Available for thoughtful projects</span>
+            <span>Design desk</span>
+            <span class="pulse">Open to UX, product, and frontend work</span>
           </div>
           <div class="note-stack" aria-label="Current design interests">
             <button class="note active" type="button" data-note="systems">
               <span>01</span>
-              Systems that reduce cognitive load
+              Map the user journey before drawing screens
             </button>
             <button class="note" type="button" data-note="access">
               <span>02</span>
-              Accessible flows with a soft landing
+              Prototype the interaction, not just the layout
             </button>
             <button class="note" type="button" data-note="motion">
               <span>03</span>
-              Motion that explains, not distracts
+              Make edge states feel intentionally designed
             </button>
           </div>
         </div>
@@ -80,7 +87,7 @@
       <section class="work section-shell" id="work">
         <div class="section-kicker reveal">
           <p class="eyebrow">Selected work</p>
-          <h2>Case studies shaped around people, pressure, and clarity.</h2>
+          <h2>Case studies with research, product decisions, and interface craft.</h2>
         </div>
 
         <div class="project-filters reveal" role="tablist" aria-label="Project categories">
@@ -90,39 +97,124 @@
           <button class="filter" type="button" data-filter="build">Build</button>
         </div>
 
-        <div class="project-list">
-          <article class="project-row reveal" data-category="research product">
+        <div class="case-grid">
+          <article class="case-card featured reveal" data-category="research product">
             <a href="#" aria-label="Open SafeMIC case study">
-              <span class="project-index">01</span>
-              <span class="project-title">SafeMIC</span>
-              <span class="project-summary">
-                Simulation tools for safer healthcare incident response.
-              </span>
-              <span class="project-tags">Research / UX / Systems</span>
+              <div class="case-visual visual-safemic" aria-hidden="true">
+                <div class="mock-window">
+                  <div class="mock-topbar"></div>
+                  <div class="mock-layout">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="mock-timeline">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+              <div class="case-content">
+                <div class="case-meta">
+                  <span>01</span>
+                  <span>UX Research</span>
+                  <span>Product Design</span>
+                </div>
+                <h3>SafeMIC</h3>
+                <p>
+                  Designing a healthcare simulation tool that helps teams practice safer,
+                  clearer incident response under pressure.
+                </p>
+                <dl class="case-details">
+                  <div>
+                    <dt>Focus</dt>
+                    <dd>Scenario flow, role clarity, response feedback</dd>
+                  </div>
+                  <div>
+                    <dt>Output</dt>
+                    <dd>Research synthesis, wireframes, interactive prototype</dd>
+                  </div>
+                </dl>
+              </div>
             </a>
           </article>
 
-          <article class="project-row reveal" data-category="product build">
+          <article class="case-card reveal" data-category="product build">
             <a href="#" aria-label="Open Student Planning Tools case study">
-              <span class="project-index">02</span>
-              <span class="project-title">Student Planning Tools</span>
-              <span class="project-summary">
-                Calm planning flows for deadlines, decisions, and support.
-              </span>
-              <span class="project-tags">Product / Prototype</span>
+              <div class="case-visual visual-planner" aria-hidden="true">
+                <div class="phone-frame">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <strong></strong>
+                </div>
+              </div>
+              <div class="case-content">
+                <div class="case-meta">
+                  <span>02</span>
+                  <span>Product</span>
+                  <span>Prototype</span>
+                </div>
+                <h3>Student Planning Tools</h3>
+                <p>
+                  Calm planning flows for students managing deadlines, decisions, and support.
+                </p>
+              </div>
             </a>
           </article>
 
-          <article class="project-row reveal" data-category="build">
+          <article class="case-card reveal" data-category="build">
             <a href="#" aria-label="Open Interaction Sketchbook case study">
-              <span class="project-index">03</span>
-              <span class="project-title">Interaction Sketchbook</span>
-              <span class="project-summary">
-                Frontend experiments exploring hover, focus, and feedback.
-              </span>
-              <span class="project-tags">Frontend / Motion</span>
+              <div class="case-visual visual-motion" aria-hidden="true">
+                <div class="motion-board">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="case-content">
+                <div class="case-meta">
+                  <span>03</span>
+                  <span>Frontend</span>
+                  <span>Motion</span>
+                </div>
+                <h3>Interaction Sketchbook</h3>
+                <p>
+                  Micro-interaction experiments exploring hover, focus, feedback, and delight.
+                </p>
+              </div>
             </a>
           </article>
+        </div>
+      </section>
+
+      <section class="process" id="process">
+        <div class="section-shell process-grid">
+          <div class="section-kicker reveal">
+            <p class="eyebrow">Process</p>
+            <h2>A designer portfolio should show how the thinking moves.</h2>
+          </div>
+          <div class="process-board reveal" aria-label="Design process">
+            <article>
+              <span>Discover</span>
+              <p>Interviews, observations, competitive scans, and problem framing.</p>
+            </article>
+            <article>
+              <span>Define</span>
+              <p>Journey maps, requirements, task flows, and design principles.</p>
+            </article>
+            <article>
+              <span>Design</span>
+              <p>Wireframes, UI systems, interaction states, and prototype loops.</p>
+            </article>
+            <article>
+              <span>Validate</span>
+              <p>Usability testing, iteration notes, accessibility checks, and handoff.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -130,7 +222,7 @@
         <div class="section-shell approach-grid">
           <div class="section-kicker reveal">
             <p class="eyebrow">Approach</p>
-            <h2>I care about the moment when a product starts to make sense.</h2>
+            <h2>I care about the moment when a product starts to feel understandable.</h2>
           </div>
           <div class="principles">
             <article class="principle reveal">
