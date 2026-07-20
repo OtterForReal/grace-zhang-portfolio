@@ -136,10 +136,6 @@ button {
   outline-offset: 4px;
 }
 
-.cursor-dot {
-  display: none;
-}
-
 .site-header {
   align-items: center;
   background: rgba(248, 249, 245, 0.82);
@@ -1301,28 +1297,6 @@ h3 {
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.2) rotate(var(--ink-rotate, 0deg));
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .cursor-dot {
-    background: var(--deep-blue);
-    border-radius: 50%;
-    display: block;
-    height: 0.68rem;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 140ms ease;
-    width: 0.68rem;
-    z-index: 50;
-  }
-
-  body:hover .cursor-dot {
-    opacity: 0.84;
   }
 }
 

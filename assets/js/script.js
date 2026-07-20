@@ -5,7 +5,6 @@ const revealItems = [...document.querySelectorAll(".reveal")];
 const filters = [...document.querySelectorAll(".filter")];
 const projectRows = [...document.querySelectorAll(".case-card")];
 const notes = [...document.querySelectorAll(".note")];
-const cursor = document.querySelector(".cursor-dot");
 const canvas = document.querySelector("[data-signal-canvas]");
 const currentPage = document.body.dataset.page;
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -115,16 +114,6 @@ document.querySelectorAll(".magnetic").forEach((item) => {
     item.style.transform = "";
   });
 });
-
-window.addEventListener(
-  "pointermove",
-  (event) => {
-    if (!cursor) return;
-    cursor.style.left = `${event.clientX}px`;
-    cursor.style.top = `${event.clientY}px`;
-  },
-  { passive: true }
-);
 
 if (!prefersReducedMotion) {
   let lastInkBloom = 0;
