@@ -127,12 +127,12 @@ window.addEventListener(
 
 if (canvas) {
   const ctx = canvas.getContext("2d");
-  const colors = ["#315c8c", "#d36a4b", "#6d8068", "#ead58b"];
-  const points = Array.from({ length: 18 }, (_, index) => ({
+  const colors = ["#d4e5ef", "#8ba3c7", "#003d6f", "#19325f", "#45475e"];
+  const points = Array.from({ length: 22 }, (_, index) => ({
     angle: (Math.PI * 2 * index) / 18,
     color: colors[index % colors.length],
-    drift: 0.65 + (index % 5) * 0.08,
-    radius: 74 + (index % 6) * 17,
+    drift: 0.42 + (index % 5) * 0.06,
+    radius: 58 + (index % 7) * 18,
   }));
 
   const draw = (time = 0) => {
@@ -151,6 +151,13 @@ if (canvas) {
     const centerY = rect.height * 0.38;
     const activeIndex = Math.max(0, notes.findIndex((note) => note.classList.contains("active")));
 
+    const wash = ctx.createRadialGradient(centerX, centerY, 20, centerX, centerY, rect.width * 0.58);
+    wash.addColorStop(0, "rgba(212, 229, 239, 0.58)");
+    wash.addColorStop(0.48, "rgba(139, 163, 199, 0.22)");
+    wash.addColorStop(1, "rgba(25, 50, 95, 0)");
+    ctx.fillStyle = wash;
+    ctx.fillRect(0, 0, rect.width, rect.height);
+
     points.forEach((point, index) => {
       const orbit = point.radius + activeIndex * 18;
       const x = centerX + Math.cos(point.angle + time * 0.00028 * point.drift) * orbit;
@@ -162,16 +169,19 @@ if (canvas) {
       ctx.beginPath();
       ctx.moveTo(x, y);
       ctx.lineTo(nextX, nextY);
-      ctx.strokeStyle = "rgba(25, 26, 30, 0.09)";
+      ctx.strokeStyle = "rgba(25, 50, 95, 0.08)";
       ctx.lineWidth = 1;
       ctx.stroke();
 
       ctx.beginPath();
-      ctx.arc(x, y, index % 4 === activeIndex ? 6.5 : 4.4, 0, Math.PI * 2);
+      ctx.arc(x, y, index % 4 === activeIndex ? 12 : 8, 0, Math.PI * 2);
       ctx.fillStyle = point.color;
-      ctx.globalAlpha = index % 4 === activeIndex ? 0.95 : 0.52;
+      ctx.shadowColor = point.color;
+      ctx.shadowBlur = index % 4 === activeIndex ? 22 : 14;
+      ctx.globalAlpha = index % 4 === activeIndex ? 0.55 : 0.28;
       ctx.fill();
       ctx.globalAlpha = 1;
+      ctx.shadowBlur = 0;
     });
 
     requestAnimationFrame(draw);
