@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Grace Zhang is an HCDE designer and engineer creating accessible, thoughtful digital experiences."
+    />
+    <title>Grace Zhang | Designer & Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand magnetic" href="#home" aria-label="Grace Zhang home">
+        Grace Zhang
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="active magnetic" href="#home">Home</a>
+        <a class="magnetic" href="#about">About</a>
+        <a class="magnetic" href="#projects">Projects</a>
+        <a class="magnetic" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-shell" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Designer & Engineer</p>
+          <h1>Designing human-centered solutions.</h1>
+          <p class="lede">
+            I’m Grace, an HCDE student at the University of Washington building accessible,
+            meaningful digital experiences with a gentle eye for systems and people.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary magnetic" href="#projects">
+              View my work
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="button ghost magnetic" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="portrait-card reveal" data-tilt>
+          <img src="assets/grace-hero.png" alt="Grace standing in a sunlit rocky landscape" />
+          <div class="portrait-note">
+            <span>Currently exploring</span>
+            UX systems, civic tech, and tiny joyful details.
+          </div>
+        </div>
+      </section>
+
+      <section class="about band" id="about">
+        <div class="section-shell about-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About</p>
+            <h2>Thoughtful products for real human moments.</h2>
+          </div>
+          <div class="about-body reveal">
+            <p>
+              I like work that combines research, interaction design, and engineering. My
+              favorite projects make complex things feel calmer, clearer, and more possible.
+            </p>
+            <div class="values" aria-label="Design values">
+              <span>Accessibility</span>
+              <span>Research</span>
+              <span>Prototyping</span>
+              <span>Frontend craft</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section-shell" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects with care in the details.</h2>
+        </div>
+
+        <div class="project-filters reveal" role="tablist" aria-label="Project categories">
+          <button class="filter active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="ux">UX</button>
+          <button class="filter" type="button" data-filter="build">Build</button>
+          <button class="filter" type="button" data-filter="research">Research</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal" data-category="ux research">
+            <div class="project-meta">
+              <span>Case study</span>
+              <span>UX Research</span>
+            </div>
+            <h3>SafeMIC</h3>
+            <p>
+              A healthcare simulation concept focused on helping teams practice safer,
+              clearer incident response under pressure.
+            </p>
+            <a href="#" aria-label="Open SafeMIC case study">Explore project</a>
+          </article>
+
+          <article class="project-card reveal" data-category="ux build">
+            <div class="project-meta">
+              <span>Prototype</span>
+              <span>Interaction</span>
+            </div>
+            <h3>Calm Campus Tools</h3>
+            <p>
+              Lightweight planning flows for students who need practical support without
+              another overwhelming dashboard.
+            </p>
+            <a href="#" aria-label="Open Calm Campus Tools case study">Explore project</a>
+          </article>
+
+          <article class="project-card reveal" data-category="build">
+            <div class="project-meta">
+              <span>Frontend</span>
+              <span>Micro-interactions</span>
+            </div>
+            <h3>Portfolio System</h3>
+            <p>
+              A living web portfolio designed to feel minimal, personal, and easy to keep
+              updated as the work grows.
+            </p>
+            <a href="#" aria-label="Open Portfolio System case study">Explore project</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact band" id="contact">
+        <div class="section-shell contact-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something kind and useful.</h2>
+          </div>
+          <div class="contact-card reveal">
+            <p>
+              I’m always happy to talk about UX, accessibility, design systems, and thoughtful
+              frontend work.
+            </p>
+            <a class="button primary magnetic" href="mailto:grace@example.com">Email Grace</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Designed and built by Grace Zhang.</span>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
