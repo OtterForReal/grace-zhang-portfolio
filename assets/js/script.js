@@ -7,6 +7,7 @@ const projectRows = [...document.querySelectorAll(".case-card")];
 const notes = [...document.querySelectorAll(".note")];
 const cursor = document.querySelector(".cursor-dot");
 const canvas = document.querySelector("[data-signal-canvas]");
+const currentPage = document.body.dataset.page;
 
 const setScrolledHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 12);
@@ -14,6 +15,12 @@ const setScrolledHeader = () => {
 
 setScrolledHeader();
 window.addEventListener("scroll", setScrolledHeader, { passive: true });
+
+if (currentPage) {
+  navLinks.forEach((link) => {
+    link.classList.toggle("active", link.dataset.page === currentPage);
+  });
+}
 
 navToggle.addEventListener("click", () => {
   const isOpen = document.body.classList.toggle("nav-open");
@@ -42,22 +49,26 @@ const revealObserver = new IntersectionObserver(
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
+const hashNavLinks = navLinks.filter((link) => link.getAttribute("href")?.startsWith("#"));
 
-      navLinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+if (hashNavLinks.length) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        hashNavLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
       });
-    });
-  },
-  { rootMargin: "-45% 0px -45% 0px" }
-);
+    },
+    { rootMargin: "-45% 0px -45% 0px" }
+  );
 
-document.querySelectorAll("main section[id]").forEach((section) => {
-  sectionObserver.observe(section);
-});
+  document.querySelectorAll("main section[id]").forEach((section) => {
+    sectionObserver.observe(section);
+  });
+}
 
 filters.forEach((filter) => {
   filter.addEventListener("click", () => {
