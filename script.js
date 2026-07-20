@@ -3,8 +3,10 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
 const filters = [...document.querySelectorAll(".filter")];
-const projectCards = [...document.querySelectorAll(".project-card")];
+const projectRows = [...document.querySelectorAll(".project-row")];
+const notes = [...document.querySelectorAll(".note")];
 const cursor = document.querySelector(".cursor-dot");
+const canvas = document.querySelector("[data-signal-canvas]");
 
 const setScrolledHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 12);
@@ -62,10 +64,16 @@ filters.forEach((filter) => {
     const selected = filter.dataset.filter;
 
     filters.forEach((item) => item.classList.toggle("active", item === filter));
-    projectCards.forEach((card) => {
-      const categories = card.dataset.category.split(" ");
-      card.classList.toggle("is-hidden", selected !== "all" && !categories.includes(selected));
+    projectRows.forEach((row) => {
+      const categories = row.dataset.category.split(" ");
+      row.classList.toggle("is-hidden", selected !== "all" && !categories.includes(selected));
     });
+  });
+});
+
+notes.forEach((note) => {
+  note.addEventListener("click", () => {
+    notes.forEach((item) => item.classList.toggle("active", item === note));
   });
 });
 
@@ -75,7 +83,7 @@ document.querySelectorAll("[data-tilt]").forEach((card) => {
     const x = (event.clientX - rect.left) / rect.width - 0.5;
     const y = (event.clientY - rect.top) / rect.height - 0.5;
 
-    card.style.transform = `perspective(900px) rotateX(${y * -5}deg) rotateY(${x * 5}deg)`;
+    card.style.transform = `perspective(900px) rotateX(${y * -4}deg) rotateY(${x * 4}deg)`;
   });
 
   card.addEventListener("pointerleave", () => {
@@ -105,3 +113,58 @@ window.addEventListener(
   },
   { passive: true }
 );
+
+if (canvas) {
+  const ctx = canvas.getContext("2d");
+  const colors = ["#315c8c", "#d36a4b", "#6d8068", "#ead58b"];
+  const points = Array.from({ length: 18 }, (_, index) => ({
+    angle: (Math.PI * 2 * index) / 18,
+    color: colors[index % colors.length],
+    drift: 0.65 + (index % 5) * 0.08,
+    radius: 74 + (index % 6) * 17,
+  }));
+
+  const draw = (time = 0) => {
+    const rect = canvas.getBoundingClientRect();
+    const scale = window.devicePixelRatio || 1;
+
+    if (canvas.width !== Math.floor(rect.width * scale)) {
+      canvas.width = Math.floor(rect.width * scale);
+      canvas.height = Math.floor(rect.height * scale);
+    }
+
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    ctx.clearRect(0, 0, rect.width, rect.height);
+
+    const centerX = rect.width * 0.52;
+    const centerY = rect.height * 0.38;
+    const activeIndex = Math.max(0, notes.findIndex((note) => note.classList.contains("active")));
+
+    points.forEach((point, index) => {
+      const orbit = point.radius + activeIndex * 18;
+      const x = centerX + Math.cos(point.angle + time * 0.00028 * point.drift) * orbit;
+      const y = centerY + Math.sin(point.angle + time * 0.00032 * point.drift) * orbit * 0.68;
+      const next = points[(index + activeIndex + 3) % points.length];
+      const nextX = centerX + Math.cos(next.angle + time * 0.00028 * next.drift) * next.radius;
+      const nextY = centerY + Math.sin(next.angle + time * 0.00032 * next.drift) * next.radius * 0.68;
+
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(nextX, nextY);
+      ctx.strokeStyle = "rgba(25, 26, 30, 0.09)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(x, y, index % 4 === activeIndex ? 6.5 : 4.4, 0, Math.PI * 2);
+      ctx.fillStyle = point.color;
+      ctx.globalAlpha = index % 4 === activeIndex ? 0.95 : 0.52;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+    });
+
+    requestAnimationFrame(draw);
+  };
+
+  requestAnimationFrame(draw);
+}

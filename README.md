@@ -7,7 +7,7 @@ A minimalist interactive portfolio site for Grace Zhang, designed as a GitHub Pa
 - `index.html` - page structure and portfolio content
 - `styles.css` - visual system, responsive layout, and micro-interactions
 - `script.js` - navigation, filtering, reveal animations, and pointer interactions
-- `assets/grace-hero.png` - hero image
+No build tools are required; the current version is a static portfolio with a custom canvas visual.
 
 ## Preview
 
