@@ -164,17 +164,34 @@ button {
 
 .brand {
   align-items: center;
-  background:
-    radial-gradient(circle at 70% 20%, rgba(212, 229, 239, 0.42), transparent 45%),
-    var(--dark-wash);
-  border-radius: 50%;
-  color: var(--paper);
+  color: var(--ink);
   display: inline-flex;
-  font-size: 0.875rem;
-  font-weight: 800;
-  height: 2.75rem;
+  font-size: 1rem;
+  font-weight: 900;
+  height: 2.5rem;
   justify-content: center;
-  width: 2.75rem;
+  min-width: max-content;
+  position: relative;
+}
+
+.brand::after {
+  background: rgba(0, 61, 111, 0.18);
+  border-radius: 999px;
+  bottom: 0.42rem;
+  content: "";
+  height: 0.38rem;
+  left: -0.08rem;
+  position: absolute;
+  right: -0.08rem;
+  transform: scaleX(0.72);
+  transform-origin: left;
+  transition: transform 180ms ease, background 180ms ease;
+  z-index: -1;
+}
+
+.brand:hover::after {
+  background: rgba(0, 61, 111, 0.26);
+  transform: scaleX(1);
 }
 
 .site-nav {
