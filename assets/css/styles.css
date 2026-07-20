@@ -897,60 +897,6 @@ h3 {
   box-shadow: 0 0 0 3px rgba(0, 95, 159, 0.18), var(--shadow);
 }
 
-.process {
-  background:
-    radial-gradient(circle at 80% 8%, rgba(212, 229, 239, 0.2), transparent 24rem),
-    radial-gradient(circle at 8% 84%, rgba(0, 61, 111, 0.28), transparent 26rem),
-    var(--dark-wash);
-  color: var(--paper);
-}
-
-.process .eyebrow,
-.process h1,
-.process h2 {
-  color: var(--paper);
-}
-
-.process-grid {
-  display: grid;
-  gap: clamp(1.5rem, 4vw, 3rem);
-}
-
-.process-board {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.process-board article {
-  border-left: 1px solid rgba(248, 249, 245, 0.32);
-  min-height: 14.5rem;
-  padding: 1rem;
-  position: relative;
-}
-
-.process-board article::before {
-  background: var(--moon-white);
-  border-radius: 50%;
-  content: "";
-  height: 0.7rem;
-  left: -0.38rem;
-  position: absolute;
-  top: 1.2rem;
-  width: 0.7rem;
-}
-
-.process-board span {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 900;
-  margin-bottom: 3.2rem;
-}
-
-.process-board p {
-  color: rgba(248, 249, 245, 0.78);
-  margin-bottom: 0;
-}
-
 .background {
   background:
     radial-gradient(circle at 85% 15%, rgba(139, 163, 199, 0.26), transparent 23rem),
@@ -961,7 +907,7 @@ h3 {
 
 .background-grid {
   display: grid;
-  gap: clamp(1.5rem, 4vw, 3rem);
+  gap: clamp(1.35rem, 3vw, 2.4rem);
 }
 
 .resume-page .section-kicker {
@@ -970,7 +916,7 @@ h3 {
 
 .resume-section {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.1rem;
 }
 
 .about-panel {
@@ -979,7 +925,7 @@ h3 {
     rgba(248, 249, 245, 0.62);
   border: 1px solid var(--line);
   border-radius: 14px;
-  grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1fr);
+  grid-template-columns: minmax(13rem, 0.58fr) minmax(0, 1fr);
   padding: clamp(1.2rem, 4vw, 2rem);
 }
 
@@ -988,6 +934,7 @@ h3 {
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   line-height: 1.12;
   margin: 0;
+  max-width: 40rem;
 }
 
 .about-copy {
@@ -1001,15 +948,15 @@ h3 {
 }
 
 .resume-heading {
-  align-items: end;
   display: grid;
-  gap: 1rem;
-  grid-template-columns: minmax(10rem, 0.28fr) minmax(0, 1fr);
+  gap: 0.35rem;
+  max-width: 48rem;
 }
 
 .resume-grid {
   align-items: start;
-  grid-template-columns: minmax(12rem, 0.28fr) minmax(0, 1fr);
+  grid-template-columns: 1fr;
+  margin-top: 0.75rem;
 }
 
 .skill-groups,
@@ -1024,7 +971,7 @@ h3 {
   background: rgba(248, 249, 245, 0.64);
   border: 1px solid var(--line);
   border-radius: 14px;
-  min-height: 9.5rem;
+  min-height: 8.75rem;
   padding: 1rem;
 }
 
@@ -1037,6 +984,7 @@ h3 {
 
 .recognition-grid article {
   border-left: 4px solid rgba(0, 61, 111, 0.42);
+  overflow-wrap: anywhere;
 }
 
 .recognition-grid p {
@@ -1263,10 +1211,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .process-board {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .about-panel,
   .resume-grid,
   .resume-heading {
@@ -1413,18 +1357,6 @@ h3 {
 
   .case-details div {
     grid-template-columns: 1fr;
-  }
-
-  .process-board {
-    grid-template-columns: 1fr;
-  }
-
-  .process-board article {
-    min-height: 9.5rem;
-  }
-
-  .process-board span {
-    margin-bottom: 1.5rem;
   }
 
   .timeline-item,

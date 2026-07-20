@@ -6,7 +6,6 @@ A minimalist interactive portfolio site for Grace Zhang, designed as a GitHub Pa
 
 - `index.html` - home page
 - `work/` - project case studies page
-- `process/` - design process page
 - `background/` - education and experience page
 - `contact/` - contact page
 - `assets/css/styles.css` - shared visual system and responsive layout
