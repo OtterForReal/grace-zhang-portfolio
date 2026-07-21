@@ -532,7 +532,7 @@ h3 {
   flex-wrap: wrap;
   gap: 0.7rem;
   justify-content: flex-end;
-  margin: 0 0 1.4rem;
+  margin: 0 0 2rem;
 }
 
 .filter {
@@ -556,8 +556,18 @@ h3 {
 
 .case-grid {
   display: grid;
-  gap: clamp(1.4rem, 4vw, 3.2rem);
+  gap: clamp(1rem, 2.4vw, 1.6rem);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  position: relative;
+}
+
+.case-grid::before {
+  background: linear-gradient(180deg, transparent, rgba(0, 61, 111, 0.16), transparent);
+  content: "";
+  inset: -0.6rem auto 0 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 1px;
 }
 
 .case-card {
@@ -568,6 +578,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 6px;
   overflow: hidden;
+  position: relative;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
@@ -581,7 +592,7 @@ h3 {
 }
 
 .case-card.featured a {
-  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1fr);
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1fr);
 }
 
 .case-card:hover {
@@ -591,7 +602,7 @@ h3 {
 }
 
 .case-card:nth-child(odd):not(.featured) {
-  margin-top: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: 0;
 }
 
 .case-card:hover .case-visual::after,
@@ -605,7 +616,7 @@ h3 {
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 18.5rem;
+  min-height: 16.5rem;
   overflow: hidden;
   padding: clamp(1.4rem, 4vw, 2.5rem);
   position: relative;
@@ -616,6 +627,10 @@ h3 {
   content: "";
   inset: 1rem;
   position: absolute;
+}
+
+.case-card.featured .case-visual {
+  min-height: 22rem;
 }
 
 .case-visual::after {
@@ -1030,6 +1045,10 @@ h3 {
   padding: clamp(1.15rem, 2.5vw, 1.65rem);
 }
 
+.case-card:not(.featured) .case-content {
+  min-height: 15rem;
+}
+
 .case-meta {
   color: var(--muted);
   display: flex;
@@ -1044,6 +1063,14 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.35rem 0.55rem;
+}
+
+.case-meta span:first-child {
+  background: rgba(0, 61, 111, 0.08);
+  border-color: rgba(0, 61, 111, 0.16);
+  color: var(--deep-blue);
+  min-width: 2.35rem;
+  text-align: center;
 }
 
 .case-content p {
@@ -1533,8 +1560,16 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .case-grid::before {
+    display: none;
+  }
+
   .case-card:nth-child(odd):not(.featured) {
     margin-top: 0;
+  }
+
+  .case-card:not(.featured) .case-content {
+    min-height: auto;
   }
 
   .about-panel,
