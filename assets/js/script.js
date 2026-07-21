@@ -142,7 +142,7 @@ if (!prefersReducedMotion) {
 
 if (canvas && !prefersReducedMotion) {
   const ctx = canvas.getContext("2d");
-  const colors = ["#d4e5ef", "#8ba3c7", "#003d6f", "#19325f", "#45475e"];
+  const colors = ["rgba(212, 229, 239, 0.42)", "rgba(139, 163, 199, 0.24)", "rgba(0, 61, 111, 0.18)", "rgba(25, 50, 95, 0.16)"];
   const points = Array.from({ length: 22 }, (_, index) => ({
     angle: (Math.PI * 2 * index) / 18,
     color: colors[index % colors.length],
@@ -184,16 +184,16 @@ if (canvas && !prefersReducedMotion) {
       ctx.beginPath();
       ctx.moveTo(x, y);
       ctx.lineTo(nextX, nextY);
-      ctx.strokeStyle = "rgba(25, 50, 95, 0.08)";
+      ctx.strokeStyle = "rgba(25, 50, 95, 0.045)";
       ctx.lineWidth = 1;
       ctx.stroke();
 
       ctx.beginPath();
-      ctx.arc(x, y, index % 4 === activeIndex ? 12 : 8, 0, Math.PI * 2);
+      ctx.ellipse(x, y, index % 4 === activeIndex ? 34 : 22, index % 4 === activeIndex ? 18 : 12, point.angle, 0, Math.PI * 2);
       ctx.fillStyle = point.color;
       ctx.shadowColor = point.color;
-      ctx.shadowBlur = index % 4 === activeIndex ? 22 : 14;
-      ctx.globalAlpha = index % 4 === activeIndex ? 0.55 : 0.28;
+      ctx.shadowBlur = index % 4 === activeIndex ? 28 : 18;
+      ctx.globalAlpha = index % 4 === activeIndex ? 0.52 : 0.24;
       ctx.fill();
       ctx.globalAlpha = 1;
       ctx.shadowBlur = 0;
