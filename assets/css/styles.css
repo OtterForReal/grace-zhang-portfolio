@@ -1077,6 +1077,109 @@ h3 {
   box-shadow: 0 0 0 3px rgba(0, 95, 159, 0.18), var(--shadow);
 }
 
+.case-study {
+  display: grid;
+  gap: clamp(1.6rem, 4vw, 3rem);
+}
+
+.case-hero {
+  align-items: center;
+  display: grid;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 0.7fr);
+  min-height: calc(100vh - 76px);
+}
+
+.case-hero-copy {
+  max-width: 46rem;
+}
+
+.case-hero-visual {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+  min-height: 24rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.case-section {
+  display: grid;
+  gap: clamp(1rem, 2.4vw, 1.8rem);
+  grid-template-columns: minmax(13rem, 0.35fr) minmax(0, 1fr);
+}
+
+.case-section-heading {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.case-section-heading h2 {
+  max-width: 34rem;
+}
+
+.case-summary-grid,
+.process-strip,
+.interaction-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.process-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-summary-grid article,
+.process-strip article,
+.interaction-list article,
+.case-callout {
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(212, 229, 239, 0.44), transparent 13rem),
+    rgba(248, 249, 245, 0.68);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: clamp(1rem, 2vw, 1.25rem);
+}
+
+.case-summary-grid span,
+.process-strip span,
+.interaction-list span {
+  color: var(--deep-blue);
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 900;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+}
+
+.case-summary-grid p,
+.process-strip p,
+.interaction-list p,
+.case-callout p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.process-strip h3 {
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  margin-bottom: 0.55rem;
+}
+
+.case-text-columns {
+  column-gap: clamp(1rem, 3vw, 2rem);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-text-columns p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
 .background {
   background:
     radial-gradient(circle at 85% 15%, rgba(139, 163, 199, 0.26), transparent 23rem),
@@ -1397,13 +1500,19 @@ h3 {
 }
 
 @media (max-width: 980px) {
+  .case-hero,
   .hero,
   .section-kicker {
     grid-template-columns: 1fr;
   }
 
+  .case-hero,
   .hero {
     min-height: auto;
+  }
+
+  .case-hero-visual {
+    min-height: 20rem;
   }
 
   .signal-lab {
@@ -1416,8 +1525,16 @@ h3 {
   }
 
   .about-panel,
+  .case-section,
   .resume-grid,
   .resume-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .case-summary-grid,
+  .case-text-columns,
+  .interaction-list,
+  .process-strip {
     grid-template-columns: 1fr;
   }
 
