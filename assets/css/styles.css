@@ -1544,6 +1544,78 @@ h3 {
   z-index: 2;
 }
 
+.basil-case {
+  background:
+    radial-gradient(ellipse at 86% 12%, rgba(116, 166, 126, 0.16), transparent 28rem),
+    radial-gradient(ellipse at 5% 50%, rgba(212, 229, 239, 0.48), transparent 28rem);
+}
+
+.basil-hero {
+  grid-template-columns: minmax(0, 0.68fr) minmax(22rem, 0.92fr);
+}
+
+.basil-button {
+  background: #315f45;
+  border-color: #315f45;
+}
+
+.basil-button:hover {
+  background: #284d3a;
+  border-color: #284d3a;
+}
+
+.basil-hero-photo {
+  background:
+    radial-gradient(ellipse at 74% 30%, rgba(139, 197, 148, 0.28), transparent 18rem),
+    rgba(246, 248, 244, 0.74);
+}
+
+.basil-hero-photo img {
+  object-position: center;
+}
+
+.basil-case .case-summary-grid span,
+.basil-case .process-strip span,
+.basil-case .interaction-list span {
+  color: #315f45;
+}
+
+.basil-case .compact-summary article:nth-child(2) p {
+  font-size: clamp(1.125rem, 1.4vw, 1.25rem);
+}
+
+.basil-research-photo {
+  min-height: 22rem;
+}
+
+.basil-research-photo img {
+  object-position: center;
+}
+
+.wide-photo {
+  min-height: clamp(20rem, 36vw, 30rem);
+}
+
+.wide-photo img {
+  object-fit: contain;
+  padding: clamp(1rem, 2.5vw, 2rem);
+}
+
+.basil-gallery .case-photo {
+  background:
+    radial-gradient(ellipse at 78% 12%, rgba(139, 197, 148, 0.18), transparent 14rem),
+    rgba(246, 248, 244, 0.74);
+}
+
+.basil-gallery .case-photo img {
+  object-position: center;
+}
+
+.basil-gallery .case-photo:not(.wide) img {
+  object-fit: contain;
+  padding: 1rem;
+}
+
 .background {
   background:
     radial-gradient(circle at 85% 15%, rgba(139, 163, 199, 0.26), transparent 23rem),
@@ -1865,6 +1937,7 @@ h3 {
 
 @media (max-width: 980px) {
   .case-hero,
+  .basil-hero,
   .hero,
   .home-about,
   .subzero-hero,
