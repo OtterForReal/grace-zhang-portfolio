@@ -1490,8 +1490,8 @@ h3 {
 
 .case-photo img {
   display: block;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   position: relative;
   transition: filter 260ms ease, transform 260ms ease;
   width: 100%;
@@ -1504,7 +1504,8 @@ h3 {
 }
 
 .hero-photo {
-  min-height: clamp(22rem, 38vw, 32rem);
+  height: auto;
+  min-height: 0;
 }
 
 .hero-photo img {
@@ -1525,12 +1526,14 @@ h3 {
 }
 
 .image-scroll-gallery .case-photo {
-  min-height: 18rem;
+  height: auto;
+  min-height: 0;
 }
 
 .image-scroll-gallery .case-photo.wide {
   grid-column: 1 / -1;
-  min-height: clamp(20rem, 38vw, 29rem);
+  height: auto;
+  min-height: 0;
 }
 
 .case-photo figcaption {
@@ -1585,7 +1588,7 @@ h3 {
 }
 
 .basil-research-photo {
-  min-height: 22rem;
+  min-height: 0;
 }
 
 .basil-research-photo img {
@@ -1593,11 +1596,12 @@ h3 {
 }
 
 .wide-photo {
-  min-height: clamp(20rem, 36vw, 30rem);
+  height: auto;
+  min-height: 0;
 }
 
 .wide-photo img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center 22%;
 }
 
@@ -1608,18 +1612,20 @@ h3 {
 }
 
 .product-showcase {
-  align-items: stretch;
+  align-items: start;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
 }
 
 .product-showcase .case-photo {
-  min-height: clamp(20rem, 32vw, 25rem);
+  height: auto;
+  min-height: 0;
 }
 
 .product-showcase .showcase-primary {
   grid-column: auto;
   grid-row: span 2;
-  min-height: clamp(28rem, 54vw, 43rem);
+  height: auto;
+  min-height: 0;
 }
 
 .product-showcase .showcase-primary img {
@@ -1643,7 +1649,7 @@ h3 {
 }
 
 .basil-gallery .case-photo img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .background {
