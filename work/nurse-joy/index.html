@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NURSE JOY case study by Grace Zhang, a medical robotics project focused on research, robot design, testing, and keyboard-controlled movement."
+    />
+    <title>NURSE JOY Case Study | Grace Zhang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body data-page="work">
+    <header class="site-header" data-header>
+      <a class="brand magnetic" href="../../" aria-label="Grace Zhang home">Grace Zhang</a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="magnetic" data-page="home" href="../../">Home</a>
+        <a class="active magnetic" data-page="work" href="../">Work</a>
+        <a class="magnetic" data-page="background" href="../../background/">Background</a>
+        <a class="magnetic" data-page="contact" href="../../contact/">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="case-study nurse-case">
+        <section class="case-hero nurse-hero section-shell">
+          <div class="case-hero-copy reveal">
+            <p class="eyebrow">Healthcare Robotics / User Research / Robot Control</p>
+            <h1 class="page-title">NURSE JOY</h1>
+            <p class="lede">
+              A pill-delivery and patient-support robot concept exploring how a small autonomous
+              device could help reduce routine workload in clinical care spaces.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button primary magnetic nurse-button"
+                href="https://nursejoy.my.canva.site/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Full project
+                <span aria-hidden="true">+</span>
+              </a>
+              <a class="button ghost magnetic" href="../">Back to work</a>
+            </div>
+          </div>
+          <figure class="case-photo hero-photo nurse-hero-photo reveal">
+            <img
+              src="../../assets/images/nurse-joy/nurse-joy-presentation.png"
+              alt="NURSE JOY final presentation cover with robot illustration and project title"
+            />
+          </figure>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="nurse-snapshot">
+          <div class="case-section-heading">
+            <p class="eyebrow">Snapshot</p>
+            <h2 id="nurse-snapshot">A small care robot designed around medication timing and nurse workload.</h2>
+          </div>
+          <div class="case-summary-grid compact-summary">
+            <article>
+              <span>Project</span>
+              <p>Medical robot concept</p>
+            </article>
+            <article>
+              <span>Role</span>
+              <p>Researcher + Robot / Control Designer</p>
+            </article>
+            <article>
+              <span>Focus</span>
+              <p>User research, market research, robot design, testing, keyboard control</p>
+            </article>
+            <article>
+              <span>Output</span>
+              <p>Working robot prototype, presentation, test flow, control code</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="nurse-research">
+          <div class="case-section-heading">
+            <p class="eyebrow">Research frame</p>
+            <h2 id="nurse-research">The opportunity was routine support, not replacing human care.</h2>
+          </div>
+          <div class="research-board">
+            <article>
+              <span>People</span>
+              <h3>Nurses and patients</h3>
+              <p>
+                I looked at care moments where nurses repeat time-sensitive delivery tasks while
+                still needing to stay available for higher-touch patient needs.
+              </p>
+            </article>
+            <article>
+              <span>Market</span>
+              <h3>Hospital service robots</h3>
+              <p>
+                Market research helped us understand common healthcare robot patterns: delivery,
+                route control, reliability, readable status, and trust in shared spaces.
+              </p>
+            </article>
+            <article>
+              <span>Design lens</span>
+              <h3>Right medicine, right time</h3>
+              <p>
+                The concept focused on a clear task: transport medication or supplies in a way
+                that feels useful, legible, and easy to supervise.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="nurse-process">
+          <div class="case-section-heading">
+            <p class="eyebrow">Design process</p>
+            <h2 id="nurse-process">I moved between research, physical build decisions, and robot behavior.</h2>
+          </div>
+          <div class="process-strip">
+            <article>
+              <span>01</span>
+              <h3>Understand the care context</h3>
+              <p>
+                I helped define user needs through user research and market research, then
+                translated them into requirements for medication delivery and patient support.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Design and test the robot</h3>
+              <p>
+                I contributed to the robot design, tested movement and interaction details, and
+                watched how the physical prototype behaved around a seated user.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Code the control behavior</h3>
+              <p>
+                I worked on the keyboard press control code so the robot could respond to basic
+                directional commands during testing and demonstration.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="nurse-control">
+          <div class="case-section-heading">
+            <p class="eyebrow">Interaction logic</p>
+            <h2 id="nurse-control">The control flow needed to be simple enough for reliable prototype testing.</h2>
+          </div>
+          <div class="control-system">
+            <div class="control-card">
+              <span>Input</span>
+              <strong>Key press</strong>
+              <p>Directional commands create a fast testing interface for the prototype.</p>
+            </div>
+            <div class="control-card">
+              <span>Behavior</span>
+              <strong>Robot movement</strong>
+              <p>The robot responds to movement instructions so the team can test delivery paths.</p>
+            </div>
+            <div class="control-card">
+              <span>Feedback</span>
+              <strong>Observed test</strong>
+              <p>We evaluate navigation, spacing, stopping, and how understandable the robot feels.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="nurse-testing">
+          <div class="case-section-heading">
+            <p class="eyebrow">Prototype test</p>
+            <h2 id="nurse-testing">Testing made the robot feel less like an idea and more like a care workflow.</h2>
+          </div>
+          <div class="case-text-columns test-visual-pair">
+            <figure class="case-photo">
+              <img
+                src="../../assets/images/nurse-joy/nurse-joy-testing.png"
+                alt="NURSE JOY robot prototype being tested near a seated participant in a clinical classroom space"
+              />
+              <figcaption>Prototype test with the robot approaching a seated user.</figcaption>
+            </figure>
+            <div class="case-callout">
+              <p>
+                The test helped us observe scale, movement readability, distance from people,
+                and whether the robot's delivery behavior felt understandable in a clinical
+                environment. My coding work supported this test by making movement controllable
+                through keyboard input.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="nurse-outcome">
+          <div class="case-section-heading">
+            <p class="eyebrow">Outcome</p>
+            <h2 id="nurse-outcome">A prototype that connected research, physical design, and controllable behavior.</h2>
+          </div>
+          <div class="case-callout">
+            <p>
+              NURSE JOY became a working robotics concept for medication delivery and patient
+              support. From my angle, the project was valuable because it required both design
+              thinking and engineering execution: understanding the care setting, shaping the
+              robot concept, testing the physical build, and coding the basic control behavior
+              needed to demonstrate movement.
+            </p>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="nurse-reflection">
+          <div class="case-section-heading">
+            <p class="eyebrow">Reflection</p>
+            <h2 id="nurse-reflection">Healthcare robots need clarity before complexity.</h2>
+          </div>
+          <div class="case-text-columns">
+            <p>
+              This project helped me think about robotics as an interaction design problem. A
+              robot in a care environment needs to communicate what it is doing, where it is
+              going, and how people can safely respond to it.
+            </p>
+            <p>
+              It also pushed me to connect research and implementation. The prototype only became
+              meaningful when the user context, market patterns, physical design, testing, and
+              control code worked together.
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>Grace Zhang</span>
+      <a href="../">Back to work</a>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+  </body>
+</html>
