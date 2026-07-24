@@ -1445,6 +1445,105 @@ h3 {
   margin-bottom: 0;
 }
 
+.subzero-case {
+  background:
+    radial-gradient(ellipse at 88% 8%, rgba(69, 90, 120, 0.12), transparent 30rem),
+    radial-gradient(ellipse at 4% 42%, rgba(0, 61, 111, 0.08), transparent 28rem);
+}
+
+.subzero-hero {
+  grid-template-columns: minmax(0, 0.72fr) minmax(22rem, 0.9fr);
+}
+
+.case-photo {
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(212, 229, 239, 0.58), transparent 16rem),
+    rgba(246, 248, 244, 0.7);
+  border: 1px solid rgba(139, 163, 199, 0.36);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.case-photo::after {
+  background:
+    radial-gradient(ellipse at center, rgba(0, 61, 111, 0.14), rgba(139, 163, 199, 0.08) 44%, transparent 72%);
+  border-radius: 50% 43% 55% 45%;
+  content: "";
+  filter: blur(10px);
+  height: 14rem;
+  opacity: 0;
+  position: absolute;
+  right: -2rem;
+  top: -2rem;
+  transform: scale(0.8);
+  transition: opacity 420ms ease, transform 420ms ease;
+  width: 14rem;
+}
+
+.case-photo:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.case-photo img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: filter 260ms ease, transform 260ms ease;
+  width: 100%;
+  z-index: 1;
+}
+
+.case-photo:hover img {
+  filter: saturate(0.88) contrast(1.02);
+  transform: scale(1.015);
+}
+
+.hero-photo {
+  min-height: clamp(22rem, 38vw, 32rem);
+}
+
+.hero-photo img {
+  object-position: center;
+}
+
+.compact-summary article:first-child p,
+.compact-summary article:nth-child(2) p {
+  color: var(--ink);
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  font-weight: 900;
+}
+
+.image-scroll-gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.image-scroll-gallery .case-photo {
+  min-height: 18rem;
+}
+
+.image-scroll-gallery .case-photo.wide {
+  grid-column: 1 / -1;
+  min-height: clamp(20rem, 38vw, 29rem);
+}
+
+.case-photo figcaption {
+  background: rgba(246, 248, 244, 0.78);
+  border-top: 1px solid rgba(139, 163, 199, 0.28);
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.75rem 0.95rem;
+  position: relative;
+  z-index: 2;
+}
+
 .background {
   background:
     radial-gradient(circle at 85% 15%, rgba(139, 163, 199, 0.26), transparent 23rem),
@@ -1768,6 +1867,7 @@ h3 {
   .case-hero,
   .hero,
   .home-about,
+  .subzero-hero,
   .section-kicker {
     grid-template-columns: 1fr;
   }
@@ -1812,6 +1912,7 @@ h3 {
 
   .case-summary-grid,
   .case-text-columns,
+  .image-scroll-gallery,
   .interaction-list,
   .process-strip {
     grid-template-columns: 1fr;
