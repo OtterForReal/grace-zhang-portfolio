@@ -1597,8 +1597,8 @@ h3 {
 }
 
 .wide-photo img {
-  object-fit: contain;
-  padding: clamp(1rem, 2.5vw, 2rem);
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .basil-gallery .case-photo {
@@ -1607,13 +1607,43 @@ h3 {
     rgba(246, 248, 244, 0.74);
 }
 
-.basil-gallery .case-photo img {
-  object-position: center;
+.product-showcase {
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
 }
 
-.basil-gallery .case-photo:not(.wide) img {
-  object-fit: contain;
-  padding: 1rem;
+.product-showcase .case-photo {
+  min-height: clamp(20rem, 32vw, 25rem);
+}
+
+.product-showcase .showcase-primary {
+  grid-column: auto;
+  grid-row: span 2;
+  min-height: clamp(28rem, 54vw, 43rem);
+}
+
+.product-showcase .showcase-primary img {
+  object-position: 50% 50%;
+}
+
+.product-showcase .showcase-secondary img {
+  object-position: 50% 50%;
+}
+
+.product-showcase .showcase-secondary:nth-of-type(2) img {
+  object-position: 58% 54%;
+}
+
+.product-showcase .showcase-secondary:nth-of-type(3) img {
+  object-position: 54% 50%;
+}
+
+.product-showcase .showcase-secondary:nth-of-type(4) img {
+  object-position: 52% 46%;
+}
+
+.basil-gallery .case-photo img {
+  object-fit: cover;
 }
 
 .background {
@@ -1989,6 +2019,10 @@ h3 {
   .interaction-list,
   .process-strip {
     grid-template-columns: 1fr;
+  }
+
+  .product-showcase .showcase-primary {
+    grid-row: auto;
   }
 
   .skill-groups,
