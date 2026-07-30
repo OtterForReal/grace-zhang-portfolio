@@ -1645,6 +1645,15 @@ h3 {
   z-index: 1;
 }
 
+.case-photo video {
+  background: var(--ink);
+  display: block;
+  height: auto;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
 .case-photo:hover img {
   filter: saturate(0.88) contrast(1.02);
   transform: scale(1.015);
@@ -1797,6 +1806,61 @@ h3 {
 
 .basil-gallery .case-photo img {
   object-fit: contain;
+}
+
+.makeup-case {
+  background:
+    radial-gradient(ellipse at 82% 10%, rgba(107, 121, 142, 0.14), transparent 28rem),
+    radial-gradient(ellipse at 10% 48%, rgba(212, 229, 239, 0.5), transparent 30rem);
+}
+
+.makeup-hero {
+  grid-template-columns: minmax(0, 0.7fr) minmax(22rem, 0.95fr);
+}
+
+.makeup-button {
+  background: #33466d;
+  border-color: #33466d;
+}
+
+.makeup-button:hover {
+  background: #263756;
+  border-color: #263756;
+}
+
+.makeup-hero-photo,
+.makeup-gallery .case-photo {
+  background:
+    radial-gradient(ellipse at 74% 26%, rgba(212, 229, 239, 0.42), transparent 17rem),
+    radial-gradient(ellipse at 16% 86%, rgba(107, 121, 142, 0.1), transparent 14rem),
+    rgba(246, 248, 244, 0.75);
+}
+
+.makeup-case .case-summary-grid span,
+.makeup-case .process-strip span,
+.makeup-case .interaction-list span {
+  color: #33466d;
+}
+
+.makeup-case .compact-summary article:nth-child(2) p {
+  font-size: clamp(1.125rem, 1.4vw, 1.25rem);
+}
+
+.makeup-gallery.product-showcase {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.makeup-gallery.product-showcase .showcase-primary {
+  grid-row: auto;
+}
+
+.makeup-gallery .case-photo img,
+.makeup-gallery .case-photo video {
+  object-position: center;
+}
+
+.makeup-gallery .case-photo video {
+  border: 0;
 }
 
 .nurse-case {
