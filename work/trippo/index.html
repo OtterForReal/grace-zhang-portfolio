@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trippo case study by Grace Zhang, a mobile travel planning app recognized at Dubstech Protothon 2026."
+    />
+    <title>Trippo Case Study | Grace Zhang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body data-page="work">
+    <header class="site-header" data-header>
+      <a class="brand magnetic" href="../../" aria-label="Grace Zhang home">Grace Zhang</a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="magnetic" data-page="home" href="../../">Home</a>
+        <a class="active magnetic" data-page="work" href="../">Work</a>
+        <a class="magnetic" data-page="contact" href="../../contact/">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="case-study trippo-case">
+        <section class="case-hero trippo-hero section-shell">
+          <div class="case-hero-copy reveal">
+            <p class="eyebrow">Mobile App / Travel Planning / Protothon Winner</p>
+            <h1 class="page-title">Trippo</h1>
+            <p class="lede">
+              A phone-based travel planning app that helps users move from destination
+              inspiration to itinerary details, budget awareness, and final trip confirmation.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button primary magnetic trippo-button"
+                href="https://www.figma.com/deck/InbMujSgayNqEJSHSC3L3S"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Presentation
+                <span aria-hidden="true">+</span>
+              </a>
+              <a class="button ghost magnetic" href="../">Back to work</a>
+            </div>
+          </div>
+          <div class="trippo-award-panel reveal" aria-label="Trippo project recognition and app flow">
+            <div>
+              <span>Dubstech Protothon 2026</span>
+              <strong>3rd place</strong>
+              <p>Recognized in our track for a mobile travel planning prototype.</p>
+            </div>
+            <ol>
+              <li>Discover</li>
+              <li>Compare</li>
+              <li>Adjust</li>
+              <li>Confirm</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="trippo-snapshot">
+          <div class="case-section-heading">
+            <p class="eyebrow">Snapshot</p>
+            <h2 id="trippo-snapshot">A travel app prototype recognized at Dubstech Protothon 2026.</h2>
+          </div>
+          <div class="case-summary-grid compact-summary">
+            <article>
+              <span>Project</span>
+              <p>Mobile travel planner</p>
+            </article>
+            <article>
+              <span>Recognition</span>
+              <p>3rd place in our track</p>
+            </article>
+            <article>
+              <span>Focus</span>
+              <p>Destination discovery, trip details, budget visibility, confirmation flow</p>
+            </article>
+            <article>
+              <span>Output</span>
+              <p>Phone app prototype and presentation for Dubstech Protothon 2026</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="trippo-flow">
+          <div class="case-section-heading">
+            <p class="eyebrow">Product logic</p>
+            <h2 id="trippo-flow">The experience follows a simple planning path: discover, compare, adjust, confirm.</h2>
+          </div>
+          <div class="process-strip trippo-flow-strip">
+            <article>
+              <span>01</span>
+              <h3>Discover destinations</h3>
+              <p>
+                The home screen starts with a friendly planning prompt and recommended places,
+                helping users enter the flow without needing to know every detail yet.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Review the plan</h3>
+              <p>
+                The trip details screen gathers cities, attractions, daily schedule, budget, and
+                route context so users can judge whether a plan feels realistic.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Resolve constraints</h3>
+              <p>
+                Budget feedback gives users a clear warning when the estimated cost is too high,
+                then suggests practical edits before they continue.
+              </p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Confirm the trip</h3>
+              <p>
+                The final confirmation screen turns the itinerary into a saved plan with route,
+                flight, hotel, attraction, and sharing actions in one place.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="trippo-screens">
+          <div class="case-section-heading">
+            <p class="eyebrow">Screen sequence</p>
+            <h2 id="trippo-screens">Only the key phone screens are shown, in the order the user would experience them.</h2>
+          </div>
+          <div class="trippo-screen-sequence">
+            <article>
+              <div class="trippo-screen-copy">
+                <span>Start</span>
+                <h3>Home: choose where to go next</h3>
+                <p>
+                  Trippo opens with recommendations and compact planning shortcuts, so the user
+                  can browse options or jump into the next trip.
+                </p>
+              </div>
+              <figure class="phone-screen">
+                <img
+                  src="../../assets/images/trippo/trippo-home.png"
+                  alt="Trippo home screen with Japan, Italy, and Egypt recommendations"
+                />
+              </figure>
+            </article>
+            <article>
+              <div class="trippo-screen-copy">
+                <span>Compare</span>
+                <h3>Trip details: understand the full plan</h3>
+                <p>
+                  The plan view combines cities, tourism vibe, attractions, daily schedule,
+                  budget summary, and a route map so users can evaluate a trip in context.
+                </p>
+              </div>
+              <figure class="phone-screen">
+                <img
+                  src="../../assets/images/trippo/trippo-plan-details.png"
+                  alt="Trippo trip details screen showing itinerary, daily schedule, and budget summary"
+                />
+              </figure>
+            </article>
+            <article>
+              <div class="trippo-screen-copy">
+                <span>Adjust</span>
+                <h3>Budget analysis: catch problems early</h3>
+                <p>
+                  When a plan is above budget, Trippo flags it directly and gives a practical
+                  suggestion instead of leaving the user to recalculate everything alone.
+                </p>
+              </div>
+              <figure class="phone-screen">
+                <img
+                  src="../../assets/images/trippo/trippo-budget.png"
+                  alt="Trippo budget analysis screen showing the trip is above selected budget"
+                />
+              </figure>
+            </article>
+            <article>
+              <div class="trippo-screen-copy">
+                <span>Confirm</span>
+                <h3>Confirm trip: package the decision</h3>
+                <p>
+                  The confirmation screen brings route overview, flight, hotel, attraction,
+                  estimated cost, share, and edit actions into one final review point.
+                </p>
+              </div>
+              <figure class="phone-screen">
+                <img
+                  src="../../assets/images/trippo/trippo-confirm.png"
+                  alt="Trippo confirm trip screen showing Japan Adventure route and confirmation actions"
+                />
+              </figure>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="trippo-outcome">
+          <div class="case-section-heading">
+            <p class="eyebrow">Outcome</p>
+            <h2 id="trippo-outcome">The prototype won 3rd place in our Dubstech Protothon 2026 track.</h2>
+          </div>
+          <div class="case-callout">
+            <p>
+              Trippo’s strength is that it makes trip planning feel more organized without
+              becoming heavy. The prototype connects destination inspiration, itinerary structure,
+              estimated cost, and confirmation into one mobile flow that feels calm and
+              decision-ready.
+            </p>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="trippo-reflection">
+          <div class="case-section-heading">
+            <p class="eyebrow">Reflection</p>
+            <h2 id="trippo-reflection">A good travel app should reduce decision overload.</h2>
+          </div>
+          <div class="case-text-columns">
+            <p>
+              Trippo helped me think about how mobile design can organize complex planning
+              information without making users feel trapped inside forms and tables.
+            </p>
+            <p>
+              The key design challenge was rhythm: giving users enough detail to trust the plan,
+              while keeping the screens light enough to keep exploring.
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>Grace Zhang</span>
+      <a href="../">Back to work</a>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+  </body>
+</html>
