@@ -1889,112 +1889,21 @@ h3 {
 .trippo-hero-panel {
   align-self: center;
   display: grid;
-  gap: 1rem;
-  max-width: 36rem;
+  max-width: 39rem;
 }
 
-.trippo-concept-card,
-.trippo-journey-card {
-  background:
-    radial-gradient(ellipse at 82% 12%, rgba(255, 194, 69, 0.18), transparent 12rem),
-    linear-gradient(135deg, rgba(91, 95, 164, 0.12), rgba(212, 229, 239, 0.42)),
-    rgba(246, 248, 244, 0.74);
-  border: 1px solid rgba(91, 95, 164, 0.2);
-  border-radius: 1.4rem;
-  box-shadow: 0 18px 48px rgba(25, 50, 95, 0.1);
+.trippo-concept-image {
+  margin: 0;
 }
 
-.trippo-concept-card {
-  display: grid;
-  overflow: hidden;
-  padding: clamp(1rem, 2.5vw, 1.35rem);
-  position: relative;
-}
-
-.trippo-concept-card::after {
-  background: linear-gradient(90deg, #d4e5ef, #5b5fa4, #ffc245);
-  content: "";
-  height: 0.28rem;
-  inset: auto 1.25rem 1rem;
-  opacity: 0.72;
-  position: absolute;
-}
-
-.trippo-concept-card img {
+.trippo-concept-image img {
   aspect-ratio: 16 / 10;
   display: block;
-  filter: drop-shadow(0 1.25rem 1.5rem rgba(91, 95, 164, 0.14));
+  filter: drop-shadow(0 1.3rem 1.8rem rgba(25, 50, 95, 0.16));
   height: auto;
   object-fit: contain;
   width: 100%;
   mix-blend-mode: screen;
-}
-
-.trippo-concept-card figcaption {
-  align-items: end;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  padding: 0.85rem 0.15rem 0.35rem;
-}
-
-.trippo-concept-card span,
-.trippo-journey-card p,
-.trippo-journey-card li span {
-  color: #5b5fa4;
-  font-size: 0.75rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.trippo-concept-card strong {
-  color: var(--ink);
-  display: block;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.3;
-  max-width: 20rem;
-  text-align: right;
-}
-
-.trippo-journey-card {
-  display: grid;
-  gap: 1rem;
-  padding: clamp(1.1rem, 3vw, 1.5rem);
-}
-
-.trippo-journey-card p {
-  margin: 0;
-}
-
-.trippo-journey-card ol {
-  display: grid;
-  gap: 0.7rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.trippo-journey-card li {
-  align-items: center;
-  background: rgba(248, 249, 245, 0.68);
-  border: 1px solid rgba(91, 95, 164, 0.16);
-  border-radius: 999px;
-  color: var(--ink);
-  display: flex;
-  font-weight: 700;
-  gap: 0.8rem;
-  min-height: 3.1rem;
-  padding: 0.72rem 1rem;
-  transition:
-    background var(--transition),
-    border-color var(--transition),
-    transform var(--transition);
-}
-
-.trippo-journey-card li:hover {
-  background: rgba(255, 255, 255, 0.82);
-  border-color: rgba(91, 95, 164, 0.3);
-  transform: translateX(0.28rem);
 }
 
 .phone-screen {
@@ -2696,15 +2605,6 @@ h3 {
 
   .trippo-screen-sequence .phone-screen {
     max-width: min(16rem, 82vw);
-  }
-
-  .trippo-concept-card figcaption {
-    align-items: start;
-    display: grid;
-  }
-
-  .trippo-concept-card strong {
-    text-align: left;
   }
 
   .site-nav a {
