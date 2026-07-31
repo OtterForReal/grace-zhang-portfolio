@@ -1886,68 +1886,109 @@ h3 {
   border-color: #474b88;
 }
 
-.trippo-award-panel {
-  align-content: center;
-  background:
-    radial-gradient(ellipse at 84% 12%, rgba(248, 249, 245, 0.82), transparent 15rem),
-    linear-gradient(135deg, rgba(91, 95, 164, 0.14), rgba(212, 229, 239, 0.4)),
-    rgba(246, 248, 244, 0.72);
-  border: 1px solid rgba(91, 95, 164, 0.22);
-  border-radius: 6px;
-  box-shadow: var(--shadow);
+.trippo-hero-panel {
+  align-self: center;
   display: grid;
-  gap: clamp(1.4rem, 4vw, 2.4rem);
-  min-height: 26rem;
+  gap: 1rem;
+  max-width: 34rem;
+}
+
+.trippo-mascot-card,
+.trippo-journey-card {
+  background:
+    radial-gradient(ellipse at 82% 12%, rgba(255, 194, 69, 0.18), transparent 12rem),
+    linear-gradient(135deg, rgba(91, 95, 164, 0.12), rgba(212, 229, 239, 0.42)),
+    rgba(246, 248, 244, 0.74);
+  border: 1px solid rgba(91, 95, 164, 0.2);
+  border-radius: 1.4rem;
+  box-shadow: 0 18px 48px rgba(25, 50, 95, 0.1);
+}
+
+.trippo-mascot-card {
+  align-items: center;
+  display: grid;
+  gap: clamp(1rem, 3vw, 1.6rem);
+  grid-template-columns: minmax(5.5rem, 0.32fr) minmax(0, 1fr);
+  min-height: 11rem;
   overflow: hidden;
-  padding: clamp(1.4rem, 4vw, 2.2rem);
+  padding: clamp(1.1rem, 3vw, 1.6rem);
   position: relative;
 }
 
-.trippo-award-panel::before {
-  background: linear-gradient(90deg, var(--moon-white), #d4e5ef, #5b5fa4);
+.trippo-mascot-card::after {
+  background: linear-gradient(90deg, #d4e5ef, #5b5fa4, #ffc245);
   content: "";
-  height: 0.38rem;
-  inset: 1.2rem 1.2rem auto;
+  height: 0.28rem;
+  inset: auto 1.25rem 1rem;
+  opacity: 0.72;
   position: absolute;
 }
 
-.trippo-award-panel span,
-.trippo-award-panel li {
+.trippo-mascot-card img {
+  aspect-ratio: 1;
+  display: block;
+  filter: drop-shadow(0 1.25rem 1.5rem rgba(91, 95, 164, 0.18));
+  height: auto;
+  object-fit: contain;
+  width: min(8rem, 100%);
+}
+
+.trippo-mascot-card span,
+.trippo-journey-card p,
+.trippo-journey-card li span {
   color: #5b5fa4;
   font-size: 0.75rem;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-.trippo-award-panel strong {
+.trippo-mascot-card strong {
   color: var(--ink);
   display: block;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3rem, 7vw, 5.2rem);
-  font-weight: 600;
-  line-height: 0.9;
-  margin-block: 0.65rem;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  line-height: 1.08;
+  margin-top: 0.35rem;
 }
 
-.trippo-award-panel p {
-  color: var(--muted);
-  margin: 0;
-  max-width: 24rem;
-}
-
-.trippo-award-panel ol {
+.trippo-journey-card {
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
+  padding: clamp(1.1rem, 3vw, 1.5rem);
+}
+
+.trippo-journey-card p {
+  margin: 0;
+}
+
+.trippo-journey-card ol {
+  display: grid;
+  gap: 0.7rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.trippo-award-panel li {
+.trippo-journey-card li {
+  align-items: center;
   background: rgba(248, 249, 245, 0.68);
-  border: 1px solid rgba(91, 95, 164, 0.18);
+  border: 1px solid rgba(91, 95, 164, 0.16);
   border-radius: 999px;
-  padding: 0.75rem 0.95rem;
+  color: var(--ink);
+  display: flex;
+  font-weight: 700;
+  gap: 0.8rem;
+  min-height: 3.1rem;
+  padding: 0.72rem 1rem;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.trippo-journey-card li:hover {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(91, 95, 164, 0.3);
+  transform: translateX(0.28rem);
 }
 
 .phone-screen {
