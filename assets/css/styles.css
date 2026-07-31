@@ -1837,7 +1837,8 @@ h3 {
 
 .carevan-case .case-summary-grid span,
 .carevan-case .process-strip span,
-.carevan-case .control-card span {
+.carevan-case .control-card span,
+.carevan-case .research-board span {
   color: #29506d;
 }
 
