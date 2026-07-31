@@ -1808,6 +1808,48 @@ h3 {
   object-fit: contain;
 }
 
+.carevan-case {
+  background:
+    radial-gradient(ellipse at 84% 10%, rgba(139, 163, 199, 0.18), transparent 30rem),
+    radial-gradient(ellipse at 8% 46%, rgba(212, 229, 239, 0.48), transparent 30rem);
+}
+
+.carevan-hero {
+  grid-template-columns: minmax(0, 0.68fr) minmax(22rem, 1fr);
+}
+
+.carevan-button {
+  background: #29506d;
+  border-color: #29506d;
+}
+
+.carevan-button:hover {
+  background: #203f57;
+  border-color: #203f57;
+}
+
+.carevan-hero-photo,
+.carevan-gallery .case-photo {
+  background:
+    radial-gradient(ellipse at 80% 18%, rgba(212, 229, 239, 0.42), transparent 17rem),
+    rgba(246, 248, 244, 0.75);
+}
+
+.carevan-case .case-summary-grid span,
+.carevan-case .process-strip span,
+.carevan-case .control-card span {
+  color: #29506d;
+}
+
+.carevan-storyboard .control-card::before {
+  background: linear-gradient(180deg, rgba(41, 80, 109, 0.46), rgba(139, 163, 199, 0.08));
+}
+
+.carevan-storyboard .control-card::after {
+  background: rgba(41, 80, 109, 0.1);
+  border-color: rgba(41, 80, 109, 0.22);
+}
+
 .makeup-case {
   background:
     radial-gradient(ellipse at 82% 10%, rgba(107, 121, 142, 0.14), transparent 28rem),
