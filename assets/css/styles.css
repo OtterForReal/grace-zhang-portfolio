@@ -849,6 +849,19 @@ h3 {
     var(--protective-indigo);
 }
 
+.safemic-card-visual {
+  padding: clamp(0.65rem, 1.8vw, 1rem);
+}
+
+.safemic-card-visual img {
+  border-radius: 0.55rem;
+  display: block;
+  max-height: 19rem;
+  object-fit: contain;
+  position: relative;
+  width: 100%;
+}
+
 .visual-trippo {
   background:
     radial-gradient(ellipse at 18% 76%, rgba(0, 61, 111, 0.12), transparent 14rem),
@@ -1605,6 +1618,133 @@ h3 {
   position: absolute;
   text-transform: uppercase;
   top: 1rem;
+}
+
+.safemic-case {
+  background:
+    radial-gradient(ellipse at 88% 12%, rgba(26, 40, 82, 0.14), transparent 32rem),
+    radial-gradient(ellipse at 8% 48%, rgba(212, 229, 239, 0.44), transparent 28rem);
+}
+
+.safemic-hero {
+  grid-template-columns: minmax(0, 0.7fr) minmax(22rem, 1fr);
+}
+
+.safemic-hero-photo {
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(118, 122, 244, 0.16), transparent 17rem),
+    linear-gradient(135deg, rgba(15, 19, 42, 0.92), rgba(31, 40, 82, 0.82));
+  margin: 0;
+  min-height: 0;
+  padding: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.safemic-hero-photo img {
+  border-radius: 0.7rem;
+  filter: saturate(0.96) contrast(1.02);
+}
+
+.safemic-case .case-summary-grid span,
+.safemic-case .process-strip span,
+.safemic-case .interaction-list span,
+.safemic-case .case-text-columns p::before {
+  color: #5660b2;
+}
+
+.safemic-research-board,
+.safemic-prototype-grid,
+.safemic-flow {
+  display: grid;
+  gap: 1rem;
+}
+
+.safemic-research-board {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.safemic-research-board article,
+.safemic-flow article {
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(212, 229, 239, 0.46), transparent 13rem),
+    rgba(248, 249, 245, 0.66);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  min-height: 12rem;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  position: relative;
+}
+
+.safemic-research-board article::before,
+.safemic-flow article::before {
+  background: linear-gradient(90deg, rgba(86, 96, 178, 0.56), rgba(139, 163, 199, 0.12), transparent);
+  content: "";
+  height: 2px;
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+}
+
+.safemic-research-board span,
+.safemic-flow span {
+  color: #5660b2;
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  padding-top: 1.05rem;
+  text-transform: uppercase;
+}
+
+.safemic-research-board p,
+.safemic-flow p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.safemic-role-callout,
+.safemic-outcome {
+  background:
+    radial-gradient(ellipse at 92% 12%, rgba(86, 96, 178, 0.12), transparent 16rem),
+    rgba(248, 249, 245, 0.7);
+}
+
+.safemic-requirements {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.safemic-gallery .case-photo,
+.safemic-prototype-grid .case-photo {
+  background:
+    radial-gradient(ellipse at 82% 16%, rgba(86, 96, 178, 0.1), transparent 16rem),
+    rgba(248, 249, 245, 0.68);
+}
+
+.safemic-gallery .case-photo img,
+.safemic-prototype-grid .case-photo img {
+  object-fit: contain;
+}
+
+.safemic-prototype-grid {
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(18rem, 0.82fr);
+}
+
+.safemic-primary-shot {
+  align-self: stretch;
+}
+
+.safemic-flow {
+  align-content: stretch;
+}
+
+.safemic-flow article {
+  min-height: 0;
+}
+
+.safemic-flow h3 {
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  margin-bottom: 0.45rem;
 }
 
 .subzero-case {
@@ -2486,6 +2626,7 @@ h3 {
   .basil-hero,
   .hero,
   .home-about,
+  .safemic-hero,
   .subzero-hero,
   .section-kicker {
     grid-template-columns: 1fr;
@@ -2545,6 +2686,9 @@ h3 {
   .interaction-list,
   .process-strip,
   .research-board,
+  .safemic-prototype-grid,
+  .safemic-requirements,
+  .safemic-research-board,
   .control-system,
   .test-visual-pair {
     grid-template-columns: 1fr;

@@ -31,163 +31,219 @@
     </header>
 
     <main>
-      <article class="case-study">
-        <section class="case-hero section-shell">
+      <article class="case-study safemic-case">
+        <section class="case-hero safemic-hero section-shell">
           <div class="case-hero-copy reveal">
-            <p class="eyebrow">Inclusive Design / UX Research / Front-End Prototype</p>
+            <p class="eyebrow">Inclusive Design / UX Research / Coded Prototype</p>
             <h1 class="page-title">SafeMic</h1>
             <p class="lede">
-              Designing a safer voice-chat experience for online gaming, where support feels
-              private, customizable, and controlled by the targeted player.
+              A Discord voice safety add-on that helps players configure protection, understand
+              flagged moments, and respond to harassment without losing control of the situation.
             </p>
-          </div>
-          <div class="case-hero-visual visual-safemic reveal" aria-hidden="true">
-            <div class="safety-console">
-              <div class="console-sidebar"></div>
-              <div class="console-main">
-                <span></span>
-                <span></span>
-                <strong></strong>
-                <span></span>
-              </div>
+            <div class="hero-actions">
+              <a class="button primary magnetic" href="../">Back to work <span aria-hidden="true">+</span></a>
             </div>
           </div>
+          <figure class="case-hero-visual visual-photo safemic-hero-photo reveal">
+            <img
+              src="../../assets/images/safemic/ready-page.png"
+              alt="SafeMic active preview screen showing a Discord safety profile ready to run."
+            />
+          </figure>
         </section>
 
         <section class="case-section section-shell reveal" aria-labelledby="snapshot-heading">
           <div class="case-section-heading">
             <p class="eyebrow">Snapshot</p>
-            <h2 id="snapshot-heading">A Discord-style safety add-on for harmful voice chat.</h2>
+            <h2 id="snapshot-heading">A coded prototype for safer online gaming voice chat.</h2>
           </div>
-          <div class="case-summary-grid">
+          <div class="case-summary-grid compact-summary">
             <article>
               <span>Project</span>
-              <p>Inclusive design, UX research, interaction design, front-end prototyping</p>
+              <p>Discord voice safety add-on</p>
             </article>
             <article>
-              <span>Duration</span>
-              <p>One academic quarter</p>
+              <span>My role</span>
+              <p>Partner research, UX flow, coded prototype</p>
             </article>
             <article>
-              <span>Team</span>
-              <p>Four designers</p>
+              <span>Focus</span>
+              <p>Gender-based harassment, private support, configurable moderation</p>
             </article>
             <article>
-              <span>Tools</span>
-              <p>React, Vite, Figma, Word, video editing tools</p>
+              <span>Output</span>
+              <p>React/Vite prototype with setup screens and live violation simulation</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="why-heading">
+          <div class="case-section-heading">
+            <p class="eyebrow">Why</p>
+            <h2 id="why-heading">Voice chat can make harassment immediate and personal.</h2>
+          </div>
+          <div class="safemic-research-board">
+            <article>
+              <span>Partner need</span>
+              <p>
+                Our partner wanted a way to reduce harmful voice-chat behavior without making the
+                targeted player manage every conflict publicly.
+              </p>
+            </article>
+            <article>
+              <span>Research signal</span>
+              <p>
+                Harassment often escalates after a player's identity is perceived through voice,
+                especially around gender-based comments and repeated targeting.
+              </p>
+            </article>
+            <article>
+              <span>Design principle</span>
+              <p>
+                SafeMic should support the player quietly, explain what happened clearly, and keep
+                final response choices understandable.
+              </p>
             </article>
           </div>
         </section>
 
         <section class="case-section section-shell reveal" aria-labelledby="role-heading">
           <div class="case-section-heading">
-            <p class="eyebrow">My role</p>
-            <h2 id="role-heading">I connected partner research to an interactive prototype.</h2>
+            <p class="eyebrow">My work</p>
+            <h2 id="role-heading">I translated partner requests into a working prototype flow.</h2>
           </div>
-          <div class="case-callout">
+          <div class="case-callout safemic-role-callout">
             <p>
-              I led the partner interview and co-design session, gathered feedback across
-              prototype versions, translated insights into safety settings and action choices,
-              built the React/Vite prototype, recorded demonstrations, and contributed to the
-              final walkthrough and reflection.
+              I focused on partner communication and user research, then turned those findings into
+              the coded prototype: setup screens, safety settings, response actions, and simulated
+              moderation states that show how SafeMic would behave during voice chat.
             </p>
           </div>
         </section>
 
-        <section class="case-section section-shell reveal" aria-labelledby="insight-heading">
+        <section class="case-section section-shell reveal" aria-labelledby="requirements-heading">
           <div class="case-section-heading">
-            <p class="eyebrow">Research insight</p>
-            <h2 id="insight-heading">The harm started when voice revealed identity.</h2>
+            <p class="eyebrow">Requirements</p>
+            <h2 id="requirements-heading">The experience needed to feel protective, not controlling.</h2>
+          </div>
+          <div class="interaction-list safemic-requirements">
+            <article>
+              <span>Private first</span>
+              <p>Explain a detected concern to the targeted player before making the moment public.</p>
+            </article>
+            <article>
+              <span>Adjustable</span>
+              <p>Let users choose sensitivity, watched channels, trusted friends, and response actions.</p>
+            </article>
+            <article>
+              <span>Explainable</span>
+              <p>Show what was flagged and why, so users can decide whether the system was correct.</p>
+            </article>
+            <article>
+              <span>Actionable</span>
+              <p>Offer direct next steps such as mute, timeout, report, block, or keep current response.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="setup-heading">
+          <div class="case-section-heading">
+            <p class="eyebrow">Setup prototype</p>
+            <h2 id="setup-heading">A step-by-step setup flow makes safety choices visible.</h2>
+          </div>
+          <div class="image-scroll-gallery safemic-gallery">
+            <figure class="case-photo">
+              <img
+                src="../../assets/images/safemic/safety-goals.png"
+                alt="SafeMic safety goals setup screen with selectable harassment and hate speech categories."
+              />
+              <figcaption>Safety goals define what SafeMic watches for.</figcaption>
+            </figure>
+            <figure class="case-photo">
+              <img
+                src="../../assets/images/safemic/sensitivity-level.png"
+                alt="SafeMic sensitivity setup screen with a medium sensitivity slider."
+              />
+              <figcaption>Sensitivity balances protection with fewer false alarms.</figcaption>
+            </figure>
+            <figure class="case-photo">
+              <img
+                src="../../assets/images/safemic/channels-friends.png"
+                alt="SafeMic channels and friends setup screen with trusted friends and protected voice channels."
+              />
+              <figcaption>Channels and trusted friends make the filter context-aware.</figcaption>
+            </figure>
+            <figure class="case-photo">
+              <img
+                src="../../assets/images/safemic/response-actions.png"
+                alt="SafeMic response actions setup screen with private alert, mute, stimulation cue, and calming phrase options."
+              />
+              <figcaption>Response actions tell users what SafeMic can do after a detection.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="prototype-heading">
+          <div class="case-section-heading">
+            <p class="eyebrow">Prototype behavior</p>
+            <h2 id="prototype-heading">The coded prototype shows both setup and live moderation.</h2>
+          </div>
+          <div class="safemic-prototype-grid">
+            <figure class="case-photo safemic-primary-shot">
+              <img
+                src="../../assets/images/safemic/violation-details.png"
+                alt="SafeMic owner simulation showing a violation detail card and incident timeline."
+              />
+              <figcaption>Violation details show category, applied response, and outcome.</figcaption>
+            </figure>
+            <div class="safemic-flow">
+              <article>
+                <span>01</span>
+                <h3>Configure</h3>
+                <p>Users define safety goals, channel scope, trusted friends, and preferred responses.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Detect</h3>
+                <p>The prototype simulates harmful voice behavior and explains the matched category.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Respond</h3>
+                <p>SafeMic applies the selected support actions and shows the owner what happened.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section section-shell reveal" aria-labelledby="testing-heading">
+          <div class="case-section-heading">
+            <p class="eyebrow">Iteration</p>
+            <h2 id="testing-heading">Research shaped a clearer, more realistic Discord experience.</h2>
           </div>
           <div class="case-text-columns">
             <p>
-              Our co-design partner described being treated normally in a game until she spoke
-              and other players realized she was a woman. The problem was not her skill; it was
-              the gender stereotyping that followed.
+              Earlier concepts leaned toward automatic punishment. Partner feedback helped us shift
+              toward transparency, player agency, and configurable boundaries instead.
             </p>
             <p>
-              This showed us that a report button alone was not enough. Reporting often happens
-              after harm occurs, while players need support during the interaction itself.
+              Building the prototype in code made the idea easier to evaluate because people could
+              move through setup, simulate incidents, and see how response choices affected the flow.
             </p>
-          </div>
-        </section>
-
-        <section class="case-section section-shell reveal" aria-labelledby="shift-heading">
-          <div class="case-section-heading">
-            <p class="eyebrow">Design shift</p>
-            <h2 id="shift-heading">From automatic punishment to player-controlled support.</h2>
-          </div>
-          <div class="process-strip">
-            <article>
-              <span>01</span>
-              <h3>Early concept</h3>
-              <p>A separate moderation dashboard that automatically detected and muted harmful speech.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Partner feedback</h3>
-              <p>Safety should not mean the system makes every decision, especially with friends or jokes.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Final direction</h3>
-              <p>A Discord-style add-on with filter categories, sensitivity levels, trusted friends, and private action choices.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="case-section section-shell reveal" aria-labelledby="final-heading">
-          <div class="case-section-heading">
-            <p class="eyebrow">Final interaction</p>
-            <h2 id="final-heading">SafeMic helps players respond without public confrontation.</h2>
-          </div>
-          <div class="interaction-list">
-            <article>
-              <span>Customize</span>
-              <p>Choose detection categories, sensitivity, automatic muting, friends, and channels.</p>
-            </article>
-            <article>
-              <span>Detect</span>
-              <p>When harmful speech is flagged, SafeMic privately explains what was detected.</p>
-            </article>
-            <article>
-              <span>Decide</span>
-              <p>The targeted player can continue, extend mute time, report, block, mark incorrect detection, or adjust filters.</p>
-            </article>
           </div>
         </section>
 
         <section class="case-section section-shell reveal" aria-labelledby="outcome-heading">
           <div class="case-section-heading">
             <p class="eyebrow">Outcome</p>
-            <h2 id="outcome-heading">The final prototype communicated a complete safety flow.</h2>
+            <h2 id="outcome-heading">SafeMic became a focused safety system, not just a report button.</h2>
           </div>
-          <div class="case-text-columns">
+          <div class="case-callout safemic-outcome">
             <p>
-              The Discord-style version felt more realistic to our partner than the original
-              dashboard. It also showed potential for supporting other users targeted in
-              voice-based spaces, including minors and marginalized players.
-            </p>
-            <p>
-              The prototype remains conceptual: it does not connect to Discord, process live
-              audio, or solve complex detection issues such as tone, sarcasm, accents, or
-              multilingual speech. The next step would be broader testing with gaming groups.
-            </p>
-          </div>
-        </section>
-
-        <section class="case-section section-shell reveal" aria-labelledby="reflection-heading">
-          <div class="case-section-heading">
-            <p class="eyebrow">Reflection</p>
-            <h2 id="reflection-heading">Protection without agency can still feel controlling.</h2>
-          </div>
-          <div class="case-callout">
-            <p>
-              This project shifted my thinking from "What should the system do to protect the
-              user?" to "How can the system support the user in deciding what should happen
-              next?" It helped me practice sensitive interviewing, co-design facilitation,
-              interaction prototyping, and communicating a speculative safety system through a
-              clear user flow.
+              The final prototype communicates a full product direction: install SafeMic, define a
+              safety profile, preview how it will behave, then see a simulated moderation event with
+              clear user choices. The next step would be broader testing around false positives,
+              multilingual voice chat, and how much control different players want in the moment.
             </p>
           </div>
         </section>
