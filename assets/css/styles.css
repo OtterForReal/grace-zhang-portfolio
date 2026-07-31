@@ -1903,7 +1903,6 @@ h3 {
   height: auto;
   object-fit: contain;
   width: 100%;
-  mix-blend-mode: screen;
 }
 
 .phone-screen {
