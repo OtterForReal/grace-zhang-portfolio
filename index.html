@@ -14,9 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=centered-nav" />
+    <link rel="stylesheet" href="assets/css/home-editorial.css?v=hero-center" />
   </head>
   <body data-page="home">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header" data-header>
       <a class="brand magnetic" href="./" aria-label="Grace Zhang home">Grace Zhang</a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
@@ -26,181 +28,73 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a class="active magnetic" data-page="home" href="./">Home</a>
         <a class="magnetic" data-page="work" href="work/">Work</a>
+        <a class="magnetic" data-page="background" href="background/">About</a>
+        <a class="magnetic cv-link is-disabled" href="#" aria-disabled="true" tabindex="-1" title="Google Drive CV link coming soon">CV</a>
         <a class="magnetic" data-page="contact" href="contact/">Contact</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero section-shell" id="home">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Product Designer / UX Researcher / Builder</p>
-          <h1>
-            Designing thoughtful products from
-            <span>research to interaction</span>.
-          </h1>
-          <p class="lede">
-            I'm Grace, an HCDE student at the University of Washington. I turn ambiguous
-            problems into clear user flows, testable prototypes, and interfaces that feel calm,
-            usable, and a little bit memorable.
-          </p>
-          <div class="hero-proof" aria-label="Portfolio focus areas">
-            <span>UX research</span>
-            <span>Interaction design</span>
-            <span>Prototyping</span>
+    <main class="home-editorial" id="main-content">
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="home-hero-center">
+          <div class="home-hello reveal">
+            <span>Hello</span>
+            <img src="assets/images/about/mountain-portrait.jpg" alt="" aria-hidden="true" />
+            <span>I’m Grace</span>
           </div>
-          <div class="hero-actions">
-            <a class="button primary magnetic" href="work/">
-              View case studies
-              <span aria-hidden="true">+</span>
-            </a>
-            <a class="button ghost magnetic" href="contact/">Say hello</a>
+          <div class="home-statement reveal">
+            <h1 id="home-title"><span>I turn complex ideas</span><span>into products that <em>feel</em></span><span>clear and easy to use.</span></h1>
+            <p>Designing across <strong>UX, accessibility, and interaction</strong><br />with a background in <strong>HCDE.</strong></p>
           </div>
         </div>
-
-        <div class="signal-lab reveal" data-tilt>
-          <canvas class="signal-canvas" data-signal-canvas aria-hidden="true"></canvas>
-          <div class="lab-header">
-            <span>Design desk</span>
-            <span class="pulse">Open to UX, product, and frontend work</span>
-          </div>
-          <div class="note-stack" aria-label="Current design interests">
-            <button class="note active" type="button" data-note="systems">
-              <span>01</span>
-              Map the user journey before drawing screens
-            </button>
-            <button class="note" type="button" data-note="access">
-              <span>02</span>
-              Prototype the interaction, not just the layout
-            </button>
-            <button class="note" type="button" data-note="motion">
-              <span>03</span>
-              Make edge states feel intentionally designed
-            </button>
-          </div>
-        </div>
+        <a class="home-scroll magnetic" href="#work"><span>Explore selected work</span><span class="home-scroll-icon" aria-hidden="true">↓</span></a>
       </section>
 
-      <section class="home-about section-shell" aria-labelledby="home-about-title">
-        <p class="section-label reveal">About me</p>
-        <div class="home-about-copy reveal">
-          <h2 id="home-about-title">
-            A student designer interested in accessible and human-centered design.
-          </h2>
-          <p>
-            I'm studying Human Centered Design & Engineering at the University of
-            Washington with a minor in Disability Studies. I care about inclusive product
-            systems, research-led decisions, and prototypes that make complex experiences
-            calmer to use.
-          </p>
-        </div>
-      </section>
+      <section class="home-projects" id="work" aria-labelledby="selected-work-title">
+        <header class="home-projects-header reveal">
+          <p>Projects <span>(2024–26)</span></p>
+          <h2 id="selected-work-title">Selected work</h2>
+        </header>
 
-      <section class="home-work section-shell" aria-labelledby="home-work-title">
-        <div class="home-work-header reveal">
-          <div>
-            <p class="section-label">Selected projects</p>
-            <h2 id="home-work-title">Recent work</h2>
-          </div>
-          <a class="text-link magnetic" href="work/">
-            View all projects
-            <span aria-hidden="true">+</span>
+        <article class="home-project reveal">
+          <a class="home-project-visual project-trippo" href="work/trippo/" aria-label="Open Trippo case study">
+            <img src="assets/images/trippo/trippo-concept.png" alt="Trippo mobile travel-planning screens" />
           </a>
-        </div>
+          <div class="home-project-copy">
+            <p class="home-project-meta"><span>01</span> Digital product · 2026</p>
+            <h3>Trippo</h3>
+            <p>A travel-planning web app that turns destinations, schedules, budgets, and confirmations into one calm flow.</p>
+            <a class="home-project-link magnetic" href="work/trippo/">View case study <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
 
-        <div class="home-work-grid">
-          <article class="preview-card reveal">
-            <a href="work/" aria-label="View Trippo in selected work">
-              <div class="case-visual visual-trippo" aria-hidden="true">
-                <div class="trip-planner">
-                  <span></span>
-                  <div>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                  </div>
-                  <strong></strong>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span>01</span>
-                  <span>Travel Planning</span>
-                </div>
-                <h3>Trippo</h3>
-                <p>
-                  A calm travel planning web app for comparing itineraries, budgets, stays,
-                  transport, and saved trip details.
-                </p>
-              </div>
-            </a>
-          </article>
+        <article class="home-project home-project-reverse reveal">
+          <a class="home-project-visual project-safemic" href="work/safemic/" aria-label="Open SafeMic case study">
+            <img src="assets/images/safemic/safemic-monitor-transparent.png" alt="SafeMic moderation interface shown on a desktop monitor" />
+          </a>
+          <div class="home-project-copy">
+            <p class="home-project-meta"><span>02</span> Inclusive safety · 2026</p>
+            <h3>SafeMic</h3>
+            <p>A focused voice-moderation concept that helps online players understand harmful behavior and choose what happens next.</p>
+            <a class="home-project-link magnetic" href="work/safemic/">View case study <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
 
-          <article class="preview-card reveal protective">
-            <a href="work/safemic/" aria-label="Open SafeMic case study">
-              <div class="case-visual visual-safemic" aria-hidden="true">
-                <div class="safety-console">
-                  <div class="console-sidebar"></div>
-                  <div class="console-main">
-                    <span></span>
-                    <span></span>
-                    <strong></strong>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span>02</span>
-                  <span>Inclusive Safety</span>
-                </div>
-                <h3>SafeMic</h3>
-                <p>
-                  A focused voice moderation tool that helps players identify harmful comments
-                  and choose what happens next.
-                </p>
-              </div>
-            </a>
-          </article>
+        <article class="home-project reveal">
+          <a class="home-project-visual project-makeup" href="work/accessible-makeup/" aria-label="Open Accessible Makeup case study">
+            <img src="assets/images/accessible-makeup/accessible-makeup-transparent.png" alt="Accessible makeup brush stand and adaptive brush grip" />
+          </a>
+          <div class="home-project-copy">
+            <p class="home-project-meta"><span>03</span> Accessibility · 2025</p>
+            <h3>Accessible Makeup</h3>
+            <p>A physical product system that makes holding, retrieving, and using makeup brushes easier for people with limited grip strength.</p>
+            <a class="home-project-link magnetic" href="work/accessible-makeup/">View case study <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
 
-          <article class="preview-card reveal">
-            <a href="work/" aria-label="View CareVan in selected work">
-              <div class="case-visual visual-carevan" aria-hidden="true">
-                <div class="mock-window">
-                  <div class="mock-topbar"></div>
-                  <div class="mock-layout">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div class="mock-timeline">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                  </div>
-                </div>
-              </div>
-              <div class="case-content">
-                <div class="case-meta">
-                  <span>03</span>
-                  <span>Healthcare Design</span>
-                </div>
-                <h3>CareVan</h3>
-                <p>
-                  A mobile clinic service concept connecting health kits, telehealth follow-up,
-                  and approachable care access.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
+        <div class="home-all-work reveal"><a class="button magnetic" href="work/">Explore all projects <span aria-hidden="true">↗</span></a></div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <span>Grace Zhang</span>
-      <a href="./">Back to top</a>
-    </footer>
 
     <script src="assets/js/script.js"></script>
   </body>

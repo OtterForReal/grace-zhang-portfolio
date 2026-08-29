@@ -29,7 +29,10 @@ navToggle.addEventListener("click", () => {
 });
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (event) => {
+    if (link.getAttribute("aria-disabled") === "true") {
+      event.preventDefault();
+    }
     document.body.classList.remove("nav-open");
     navToggle.setAttribute("aria-expanded", "false");
   });

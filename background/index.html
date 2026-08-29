@@ -3,204 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Grace Zhang's about, education, experience, skills, and recognition." />
-    <title>Background | Grace Zhang</title>
+    <meta name="description" content="About Grace Zhang, a product designer working across accessible digital and physical experiences." />
+    <title>About | Grace Zhang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=centered-nav" />
+    <link rel="stylesheet" href="../assets/css/about-editorial.css" />
   </head>
   <body data-page="background">
     <header class="site-header" data-header>
       <a class="brand magnetic" href="../" aria-label="Grace Zhang home">Grace Zhang</a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
       <nav class="site-nav" aria-label="Primary navigation">
         <a class="magnetic" data-page="home" href="../">Home</a>
         <a class="magnetic" data-page="work" href="../work/">Work</a>
+        <a class="active magnetic" data-page="background" href="./">About</a>
+        <a class="magnetic cv-link is-disabled" href="#" aria-disabled="true" title="Google Drive CV link coming soon">CV</a>
         <a class="magnetic" data-page="contact" href="../contact/">Contact</a>
       </nav>
     </header>
 
-    <main>
-      <section class="background resume-page" id="background">
-        <div class="section-shell background-grid">
-          <section class="resume-section about-panel reveal" aria-labelledby="about-heading">
-            <div>
-              <p class="eyebrow">About me</p>
-              <h2 id="about-heading">Curious about people. Thoughtful about design.</h2>
-            </div>
-            <div class="about-copy">
-              <p>
-                I am pursuing a B.S. in Human Centered Design & Engineering at the University of
-                Washington, with a minor in Disability Studies. My work brings together user
-                research, web design, app design, data analysis, CAD modeling, 3D printing, and
-                prototyping.
-              </p>
-              <p>
-                I enjoy turning complex problems into experiences that feel clear, useful, and
-                approachable. Whether I'm designing a digital product or building a physical
-                prototype, I focus on understanding people's needs and creating solutions that are
-                accessible, practical, and thoughtfully made.
-              </p>
-            </div>
-          </section>
+    <main class="about-editorial">
+      <section class="about-hero" aria-labelledby="about-title">
+        <div class="about-hero-copy reveal">
+          <p class="about-kicker">About me</p>
+          <h1 id="about-title">Hi, I’m Grace.</h1>
+          <p class="about-deck">I’m an aspiring Product Designer with a background in Human Centered Design &amp; Engineering, interested in creating digital experiences that balance usability, accessibility, and visual design.</p>
+          <p>I’ve worked on web apps, interactive prototypes, accessibility-focused products, and design systems. I usually sit somewhere between UX and technology: I enjoy understanding why something feels confusing, turning messy problems into clearer flows, and thinking about how a design can actually work once it’s built.</p>
+        </div>
+        <figure class="about-photo about-photo-main reveal">
+          <img src="../assets/images/about/mountain-portrait.jpg" alt="Grace standing in front of mountains above the clouds" />
+          <figcaption>Designer, builder, and curious traveler.</figcaption>
+        </figure>
+      </section>
 
-          <section class="resume-section reveal" aria-labelledby="education-heading">
-            <div class="resume-heading">
-              <p class="eyebrow">Education</p>
-              <h2 id="education-heading">Academic foundation</h2>
-            </div>
-            <div class="timeline">
-              <article class="timeline-item">
-                <span class="timeline-date">09/2023 - In progress</span>
-                <h3>University of Washington</h3>
-                <p>B.S. Human Centered Design & Engineering, minor in Disability Studies.</p>
-                <div class="timeline-tags">
-                  <span>Dean's List 7 times</span>
-                  <span>HCDE</span>
-                  <span>Accessibility</span>
-                  <span>Seattle, WA</span>
-                </div>
-              </article>
-            </div>
-          </section>
+      <section class="about-collage" aria-label="Places and moments that inspire Grace">
+        <figure class="about-photo collage-beach reveal"><img src="../assets/images/about/beach.jpg" alt="A quiet beach and forested cliff" /></figure>
+        <figure class="about-photo collage-canyon reveal"><img src="../assets/images/about/canyon-portrait.jpg" alt="Grace exploring a red rock canyon" /></figure>
+        <figure class="about-photo collage-tree reveal"><img src="../assets/images/about/tree-light.jpg" alt="Sunlight shining through an old tree" /></figure>
+        <p class="collage-note reveal">A few things that keep me curious ↗</p>
+      </section>
 
-          <section class="resume-section reveal" aria-labelledby="experience-heading">
-            <div class="resume-heading">
-              <p class="eyebrow">Internship experience</p>
-              <h2 id="experience-heading">Hands-on technical and design work</h2>
-            </div>
-            <div class="timeline">
-              <article class="timeline-item">
-                <span class="timeline-date">01/2026 - Present</span>
-                <h3>Web Developer & Web Services Administrator</h3>
-                <p>
-                  Infectious Disease Alliance, Denmark. Managed and troubleshot Wix and OJS
-                  websites, including content updates, technical fixes, basic PHP customizations,
-                  newsletter improvements, and backend operations.
-                </p>
-                <div class="timeline-tags">
-                  <span>HTML/CSS</span>
-                  <span>Wix</span>
-                  <span>OJS</span>
-                  <span>Remote</span>
-                </div>
-              </article>
+      <section class="about-story" aria-labelledby="work-heading">
+        <div class="about-section-heading reveal"><span>01</span><h2 id="work-heading">In my work</h2></div>
+        <div class="about-story-copy reveal">
+          <p>I’m especially interested in products that make technology easier and more inclusive for different people.</p>
+          <p>A lot of my projects explore accessibility, safety, travel, and everyday experiences — from designing accessible makeup tools to building SafeMic, a concept for safer online gaming spaces, and Trippo, a travel-planning web app.</p>
+          <p>I also enjoy working beyond the screen. I’ve experimented with physical prototyping, 3D modeling, coding, and interactive systems, which helps me think about products from both a design and implementation perspective.</p>
+        </div>
+        <figure class="about-photo story-photo reveal"><img src="../assets/images/about/road.jpg" alt="A winding road disappearing into the landscape" /><figcaption>I like following an idea all the way from question to build.</figcaption></figure>
+      </section>
 
-              <article class="timeline-item">
-                <span class="timeline-date">07/2024 - 09/2024</span>
-                <h3>Mechanical Engineer Intern</h3>
-                <p>
-                  Parker Hannifin Corporation, Shanghai. Analyzed engineering product data,
-                  identified performance trends, and maintained product specification databases
-                  for engineering and sales teams.
-                </p>
-                <div class="timeline-tags">
-                  <span>Data analysis</span>
-                  <span>Engineering</span>
-                  <span>Product systems</span>
-                </div>
-              </article>
-
-              <article class="timeline-item">
-                <span class="timeline-date">06/2023 - 09/2023</span>
-                <h3>Data Analyst Intern</h3>
-                <p>
-                  Vigeotec Technology Limited, Shanghai. Used Python and MS Office to analyze U.S.
-                  college data, produced 80 school reports, studied customer needs around OpenAI
-                  products, and supported RedNote outreach.
-                </p>
-                <div class="timeline-tags">
-                  <span>Python</span>
-                  <span>MS Office</span>
-                  <span>Research</span>
-                  <span>Customer analysis</span>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="resume-section resume-grid reveal" aria-labelledby="skills-heading">
-            <div class="resume-heading">
-              <p class="eyebrow">Skills</p>
-              <h2 id="skills-heading">Tools and strengths</h2>
-            </div>
-            <div class="skill-groups">
-              <article>
-                <h3>Design</h3>
-                <div class="timeline-tags">
-                  <span>User Research</span>
-                  <span>Figma Design</span>
-                  <span>Web Design</span>
-                  <span>Accessibility</span>
-                </div>
-              </article>
-              <article>
-                <h3>Engineering</h3>
-                <div class="timeline-tags">
-                  <span>CAD Modeling</span>
-                  <span>3D Printing</span>
-                  <span>Data Analysis</span>
-                  <span>Basic scripting</span>
-                </div>
-              </article>
-              <article>
-                <h3>Languages</h3>
-                <div class="timeline-tags">
-                  <span>English</span>
-                  <span>French</span>
-                  <span>Mandarin</span>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="resume-section resume-grid reveal" aria-labelledby="recognition-heading">
-            <div class="resume-heading">
-              <p class="eyebrow">Recognition</p>
-              <h2 id="recognition-heading">Leadership, awards, and certifications</h2>
-            </div>
-            <div class="recognition-grid">
-              <article>
-                <span class="timeline-date">2025 - 2026</span>
-                <h3>Husky Adapt, Lead of Accessible Makeup Team</h3>
-                <p>University of Washington</p>
-              </article>
-              <article>
-                <span class="timeline-date">2024 - 2025</span>
-                <h3>CIRCLE Ambassador</h3>
-                <p>University of Washington</p>
-              </article>
-              <article>
-                <span class="timeline-date">Certification</span>
-                <h3>SOLIDWORKS CAD Design Associate (CSWA)</h3>
-              </article>
-              <article>
-                <span class="timeline-date">2021 - 2022</span>
-                <h3>National French Contest, Honorable Mention</h3>
-              </article>
-              <article>
-                <span class="timeline-date">2021 - 2022</span>
-                <h3>FTC Connect Award</h3>
-                <p>First Tech Challenge</p>
-              </article>
-            </div>
-          </section>
+      <section class="about-story about-story-process" aria-labelledby="process-heading">
+        <figure class="about-photo process-photo reveal"><img src="../assets/images/about/slot-canyon.jpg" alt="Light tracing the layered walls of a slot canyon" /></figure>
+        <div class="about-section-heading reveal"><span>02</span><h2 id="process-heading">My process</h2></div>
+        <div class="about-story-copy reveal">
+          <p>Usually starts with asking <strong>why</strong>.</p>
+          <div class="why-list" aria-label="Questions that guide Grace's design process">
+            <p><strong>Why</strong> does the user have to do this?</p>
+            <p><strong>Why</strong> are we making this assumption?</p>
+            <p><strong>Why</strong> isn’t this kind of design being used in real life already?</p>
+          </div>
+          <p>I like mapping out flows, finding the awkward parts, testing ideas, and slowly turning something complicated into something that feels simple.</p>
+          <p>I probably overthink things a little — but in design, that can actually be useful :)</p>
         </div>
       </section>
+
+      <section class="about-story" aria-labelledby="life-heading">
+        <div class="about-section-heading reveal"><span>03</span><h2 id="life-heading">When I’m not designing</h2></div>
+        <div class="about-story-copy reveal">
+          <p>You’ll probably find me planning another trip, taking way too many photos, experimenting with something new, playing games, or spending time with my pup.</p>
+          <p>I also love coming back to some of my old interests — model building, fencing, cooking, and different ball sports. They remind me of where I started, let me reconnect with different sides of myself, and sometimes even give me unexpected inspiration for what I want to create next.</p>
+        </div>
+        <figure class="about-photo life-photo reveal"><img src="../assets/images/about/food.jpg" alt="A home-cooked bowl with sliced meat and greens" /><figcaption>Cooking is one of my favorite ways to slow down.</figcaption></figure>
+      </section>
+
+      <section class="about-end reveal" aria-label="Contact invitation">
+        <p>Have a project, idea, or very specific travel recommendation?</p>
+        <a class="button magnetic" href="../contact/">Let’s talk <span aria-hidden="true">↗</span></a>
+      </section>
     </main>
-
-    <footer class="site-footer">
-      <span>Grace Zhang</span>
-      <a href="../contact/">Contact</a>
-    </footer>
-
     <script src="../assets/js/script.js"></script>
   </body>
 </html>

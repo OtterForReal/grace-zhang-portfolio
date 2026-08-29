@@ -11,7 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=centered-nav" />
+    <link rel="stylesheet" href="../assets/css/contact-editorial.css?v=no-scroll" />
   </head>
   <body data-page="contact">
     <header class="site-header" data-header>
@@ -23,40 +24,42 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a class="magnetic" data-page="home" href="../">Home</a>
         <a class="magnetic" data-page="work" href="../work/">Work</a>
+        <a class="magnetic" data-page="background" href="../background/">About</a>
+        <a class="magnetic cv-link is-disabled" href="#" aria-disabled="true" title="Google Drive CV link coming soon">CV</a>
         <a class="active magnetic" data-page="contact" href="../contact/">Contact</a>
       </nav>
     </header>
 
-    <main>
-      <section class="contact section-shell" id="contact">
-        <div class="contact-panel reveal">
-          <p class="eyebrow">Contact</p>
-          <h1 class="page-title">Have a thoughtful product problem?</h1>
-          <p>
-            I'm currently seeking internship and full-time opportunities where I can contribute to
-            meaningful projects and continue growing as a designer.
-          </p>
-          <div class="contact-links">
-            <a class="contact-link magnetic" href="mailto:siyuanzhang510@gmail.com">
-              <span>Email</span>
-              siyuanzhang510@gmail.com
-            </a>
-            <a
-              class="contact-link magnetic"
-              href="https://linkedin.com/in/grace-zhang-165b46277"
-            >
-              <span>LinkedIn</span>
-              linkedin.com/in/grace-zhang-165b46277
-            </a>
-          </div>
+    <main class="contact-editorial" id="contact">
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <div class="contact-intro reveal">
+          <p class="contact-kicker">Contact</p>
+          <h1 id="contact-title">Let’s make something <em>clear, useful,</em> and thoughtful.</h1>
+        </div>
+        <div class="contact-note reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p>I’m currently seeking internship and full-time opportunities where I can contribute to meaningful projects and continue growing as a designer.</p>
         </div>
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <span>Grace Zhang</span>
-      <a href="../">Home</a>
-    </footer>
+      <section class="contact-actions" aria-label="Ways to contact Grace">
+        <a class="contact-action contact-action-email magnetic reveal" href="mailto:siyuanzhang510@gmail.com">
+          <span class="contact-action-label">Email me</span>
+          <strong>siyuanzhang510@gmail.com</strong>
+          <span class="contact-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="contact-action contact-action-linkedin magnetic reveal" href="https://linkedin.com/in/grace-zhang-165b46277" target="_blank" rel="noreferrer">
+          <span class="contact-action-label">Connect on LinkedIn</span>
+          <strong>grace-zhang-165b46277</strong>
+          <span class="contact-arrow" aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section class="contact-signoff reveal" aria-label="Closing note">
+        <p>Whether it’s a product idea, design opportunity, or just a good conversation—my inbox is open.</p>
+        <span>Based in Seattle · Open to opportunities</span>
+      </section>
+    </main>
 
     <script src="../assets/js/script.js"></script>
   </body>

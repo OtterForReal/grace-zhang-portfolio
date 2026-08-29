@@ -1,0 +1,69 @@
+:root { --about-ink: #10100f; --about-paper: #f7f6f1; --about-lime: #e9ff5b; }
+body[data-page="background"] { background: var(--about-paper); }
+.about-editorial { color: var(--about-ink); overflow: hidden; }
+.about-editorial p { font-size: clamp(1.05rem, 1.35vw, 1.28rem); line-height: 1.65; }
+.about-editorial figure { margin: 0; }
+.about-hero, .about-story, .about-collage, .about-end { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+.about-hero { min-height: calc(100vh - 86px); display: grid; grid-template-columns: minmax(0, .9fr) minmax(360px, .72fr); gap: clamp(48px, 8vw, 132px); align-items: center; padding: clamp(76px, 10vw, 150px) 0 90px; }
+.about-hero-copy { max-width: 690px; }
+.about-kicker { margin: 0 0 16px; font-size: .78rem !important; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.about-hero h1, .about-section-heading h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; letter-spacing: -.045em; line-height: .9; }
+.about-hero h1 { margin: 0 0 32px; font-size: clamp(5.2rem, 10vw, 9.4rem); }
+.about-deck { font-size: clamp(1.35rem, 2vw, 2rem) !important; line-height: 1.42 !important; color: #242421; }
+.about-photo { position: relative; }
+.about-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 24px; }
+.about-photo figcaption { margin-top: 12px; font-size: .78rem; font-weight: 700; color: #66665f; }
+.about-photo-main { height: min(70vh, 740px); transform: rotate(2deg); }
+.about-photo-main::before { content: "Currently based in Seattle"; position: absolute; z-index: 2; right: -24px; top: 28px; max-width: 130px; padding: 16px 18px; border-radius: 50%; background: var(--about-lime); font-size: .75rem; line-height: 1.2; font-weight: 900; text-align: center; transform: rotate(7deg); }
+.about-collage { min-height: 850px; position: relative; margin-top: 40px; margin-bottom: 130px; }
+.about-collage .about-photo { position: absolute; }
+.collage-beach { left: 2%; top: 4%; width: 31%; height: 580px; transform: rotate(-3deg); }
+.collage-canyon { left: 37%; top: 120px; width: 27%; height: 620px; transform: rotate(2deg); z-index: 2; }
+.collage-tree { right: 1%; top: 0; width: 34%; height: 500px; transform: rotate(3deg); }
+.collage-note { position: absolute; right: 8%; bottom: 90px; width: 250px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem !important; line-height: 1.05 !important; transform: rotate(-5deg); }
+.about-story { display: grid; grid-template-columns: 220px minmax(0, 1fr) minmax(320px, .78fr); gap: clamp(34px, 6vw, 96px); align-items: start; padding: clamp(110px, 13vw, 190px) 0; border-top: 1px solid rgba(16,16,15,.22); }
+.about-section-heading span { display: block; margin-bottom: 34px; font-size: .75rem; font-weight: 900; letter-spacing: .12em; }
+.about-section-heading h2 { margin: 0; font-size: clamp(4rem, 7vw, 7rem); }
+.about-story-copy { max-width: 670px; }
+.about-story-copy p:first-child { margin-top: 0; }
+.story-photo { height: 530px; transform: rotate(2deg); }
+.life-photo { height: auto; transform: rotate(2deg); }
+.life-photo img { aspect-ratio: auto; height: auto; object-fit: contain; object-position: center; }
+.about-story-process { grid-template-columns: minmax(330px, .85fr) 220px minmax(0, 1fr); }
+.process-photo { height: 650px; transform: rotate(-2deg); }
+.why-list { margin: 36px 0; padding: 24px 0 24px 30px; border-left: 5px solid var(--about-lime); }
+.why-list p { margin: 0 0 12px; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.65rem, 2.5vw, 2.5rem) !important; line-height: 1.15 !important; }
+.why-list p:last-child { margin-bottom: 0; }
+.about-end { display: flex; justify-content: space-between; align-items: center; gap: 32px; padding: 70px 0 110px; border-top: 1px solid rgba(16,16,15,.22); }
+.about-end p { max-width: 700px; margin: 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.3rem, 4vw, 4.5rem) !important; line-height: 1 !important; }
+.cv-link.is-disabled { opacity: .72; }
+@media (max-width: 900px) {
+  .about-hero, .about-story, .about-collage, .about-end { width: min(100% - 36px, 720px); }
+  .about-hero { grid-template-columns: 1fr; min-height: auto; padding-top: 82px; }
+  .about-photo-main { height: 72vh; min-height: 520px; }
+  .about-collage { min-height: 1050px; margin-top: 30px; }
+  .collage-beach { left: 0; width: 55%; height: 480px; }
+  .collage-canyon { left: auto; right: 0; top: 180px; width: 52%; height: 540px; }
+  .collage-tree { left: 8%; right: auto; top: 580px; width: 50%; height: 390px; }
+  .collage-note { right: 0; bottom: 70px; width: 38%; }
+  .about-story, .about-story-process { grid-template-columns: 1fr; }
+  .about-section-heading { display: flex; gap: 22px; align-items: baseline; }
+  .about-section-heading span { margin: 0; }
+  .about-story .about-photo { width: min(100%, 520px); height: 560px; }
+  .about-story .life-photo { height: auto; }
+  .about-story-process .process-photo { order: 3; }
+}
+@media (max-width: 560px) {
+  .about-hero, .about-story, .about-collage, .about-end { width: min(100% - 28px, 520px); }
+  .about-hero h1 { font-size: 4.8rem; }
+  .about-photo-main::before { right: -8px; }
+  .about-collage { min-height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 70px; }
+  .about-collage .about-photo, .collage-note { position: static; width: auto; height: 350px; transform: none; }
+  .about-collage .collage-tree { grid-column: 1 / -1; height: 280px; }
+  .collage-note { grid-column: 1 / -1; height: auto; width: auto; margin: 12px 0 0; }
+  .about-story { padding: 86px 0; }
+  .about-section-heading h2 { font-size: 4rem; }
+  .about-story .about-photo { height: 430px; }
+  .about-story .life-photo { height: auto; }
+  .about-end { align-items: flex-start; flex-direction: column; }
+}

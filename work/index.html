@@ -14,7 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=centered-nav" />
+    <link rel="stylesheet" href="../assets/css/work-playground.css" />
   </head>
   <body data-page="work">
     <header class="site-header" data-header>
@@ -26,31 +27,32 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a class="magnetic" data-page="home" href="../">Home</a>
         <a class="active magnetic" data-page="work" href="../work/">Work</a>
+        <a class="magnetic" data-page="background" href="../background/">About</a>
+        <a class="magnetic cv-link is-disabled" href="#" aria-disabled="true" title="Google Drive CV link coming soon">CV</a>
         <a class="magnetic" data-page="contact" href="../contact/">Contact</a>
       </nav>
     </header>
 
     <main>
       <section class="work section-shell" id="work">
-        <div class="section-kicker reveal">
-          <p class="eyebrow">Selected work</p>
-          <h1 class="page-title">Case studies across healthcare, accessibility, robotics, and digital systems.</h1>
-        </div>
-
-        <div class="project-filters reveal" role="tablist" aria-label="Project categories">
-          <button class="filter active" type="button" data-filter="all">All</button>
-          <button class="filter" type="button" data-filter="healthcare">Healthcare</button>
-          <button class="filter" type="button" data-filter="accessibility">Accessibility</button>
-          <button class="filter" type="button" data-filter="robotics">Robotics</button>
-          <button class="filter" type="button" data-filter="digital">Digital</button>
-        </div>
-
         <div class="case-grid">
-          <article class="case-card featured reveal" data-category="digital product">
+          <div class="work-board-center reveal">
+            <div class="section-kicker">
+              <p class="eyebrow">Selected projects</p>
+              <h1 class="page-title">Work</h1>
+              <p class="work-intro">
+                Product design, research, accessibility, robotics, and a few experiments made
+                along the way.
+              </p>
+            </div>
+
+          </div>
+
+          <article class="case-card project-trippo featured transparent-artifact reveal" data-category="digital product">
             <a href="trippo/" aria-label="Open Trippo case study">
-              <div class="case-visual visual-trippo trippo-card-visual" aria-hidden="true">
+              <div class="case-visual visual-trippo compact-icon" aria-hidden="true">
                 <img
-                  src="../assets/images/trippo/trippo-home.png"
+                  src="../assets/images/trippo/trippo-mascot-transparent.png"
                   alt=""
                 />
               </div>
@@ -79,12 +81,12 @@
             </a>
           </article>
 
-          <article class="case-card reveal" data-category="digital accessibility">
+          <article class="case-card project-safemic transparent-artifact reveal" data-category="digital accessibility">
             <a href="safemic/" aria-label="Open SafeMic case study">
-              <div class="case-visual visual-safemic visual-photo safemic-card-visual" aria-hidden="true">
+              <div class="case-visual visual-safemic visual-photo safemic-card-visual compact-icon">
                 <img
-                  src="../assets/images/safemic/ready-page.png"
-                  alt=""
+                  src="../assets/images/safemic/safemic-monitor-transparent.png"
+                  alt="SafeMic interface displayed on a desktop computer monitor"
                 />
               </div>
               <div class="case-content">
@@ -102,12 +104,12 @@
             </a>
           </article>
 
-          <article class="case-card reveal" data-category="healthcare product">
+          <article class="case-card project-carevan transparent-artifact reveal" data-category="healthcare product">
             <a href="carevan/" aria-label="Open CareVan case study">
-              <div class="case-visual visual-carevan visual-photo" aria-hidden="true">
+              <div class="case-visual visual-carevan visual-photo compact-icon">
                 <img
-                  src="../assets/images/carevan/carevan-open-model.jpg"
-                  alt=""
+                  src="../assets/images/carevan/carevan-illustrated-transparent-final.png"
+                  alt="Illustrated CareVan mobile clinic with its interior and access ramp visible"
                 />
               </div>
               <div class="case-content">
@@ -135,12 +137,12 @@
             </a>
           </article>
 
-          <article class="case-card reveal" data-category="accessibility product">
-            <a href="accessible-makeup/" aria-label="Open Accessible Makeup case study">
-              <div class="case-visual visual-makeup visual-photo" aria-hidden="true">
+          <article class="case-card project-makeup transparent-artifact reveal" data-category="accessibility product">
+            <a href="accessible-makeup/?v=20260829" aria-label="Open Accessible Makeup case study">
+              <div class="case-visual visual-makeup visual-photo compact-icon">
                 <img
-                  src="../assets/images/accessible-makeup/prototype-stand.jpg"
-                  alt=""
+                  src="../assets/images/accessible-makeup/accessible-makeup-transparent.png"
+                  alt="Illustrated accessible makeup brush holder and adaptable grip attachment"
                 />
               </div>
               <div class="case-content">
@@ -158,11 +160,11 @@
             </a>
           </article>
 
-          <article class="case-card reveal" data-category="robotics healthcare">
+          <article class="case-card project-nursejoy transparent-artifact reveal" data-category="robotics healthcare">
             <a href="nurse-joy/" aria-label="Open NURSE JOY case study">
-              <div class="case-visual visual-robot visual-photo" aria-hidden="true">
+              <div class="case-visual visual-robot compact-icon" aria-hidden="true">
                 <img
-                  src="../assets/images/nurse-joy/nurse-joy-testing.png"
+                  src="../assets/images/nurse-joy/robot-icon.png"
                   alt=""
                 />
               </div>
@@ -181,23 +183,19 @@
             </a>
           </article>
 
-          <article class="case-card reveal" data-category="digital product">
+          <article class="case-card project-basil transparent-artifact reveal" data-category="digital product">
             <a href="basil/" aria-label="Open Basil Eating Habit App Design case study">
-              <div class="case-visual visual-basil" aria-hidden="true">
-                <div class="app-preview">
-                  <div class="app-phone small">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div class="app-phone">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <strong>basil</strong>
-                </div>
+              <div class="case-visual basil-screen-stack">
+                <img
+                  class="basil-screen basil-screen-back"
+                  src="../assets/images/basil/basil-splash-phone-transparent.png"
+                  alt="Basil app splash screen shown in a phone"
+                />
+                <img
+                  class="basil-screen basil-screen-front"
+                  src="../assets/images/basil/basil-pet-phone-transparent-v2.png"
+                  alt="Basil pet and accessories screen shown in a phone"
+                />
               </div>
               <div class="case-content">
                 <div class="case-meta">
@@ -214,15 +212,13 @@
             </a>
           </article>
 
-          <article class="case-card reveal" data-category="robotics product">
+          <article class="case-card project-urov transparent-artifact reveal" data-category="robotics product">
             <a href="subzero/" aria-label="Open Subzero UROV Flora Fauna Collection Attachment case study">
-              <div class="case-visual visual-subzero" aria-hidden="true">
-                <div class="urov-model">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+              <div class="case-visual visual-subzero compact-icon">
+                <img
+                  src="../assets/images/urov/urov-cad-transparent-final-v2.png"
+                  alt="CAD rendering of the Subzero UROV flora and fauna collection attachment"
+                />
               </div>
               <div class="case-content">
                 <div class="case-meta">
@@ -241,11 +237,6 @@
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <span>Grace Zhang</span>
-      <a href="../">Home</a>
-    </footer>
 
     <script src="../assets/js/script.js"></script>
   </body>
